@@ -1,0 +1,43 @@
+.menu {
+  padding: 8rem 0 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.aboutMenu {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 5rem;
+}
+
+.aboutMenu p {
+  font-size: 1.5rem;
+  color: #444444;
+  line-height: 1.8;
+}
+
+.menuTitle h2 {
+  color: #c8a97e;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.menuTitle h3 {
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: -1.5rem;
+  letter-spacing: -3px;
+}
+
+.menuOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  column-gap: 3rem;
+}

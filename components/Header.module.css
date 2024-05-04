@@ -1,0 +1,82 @@
+.navigation {
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 20rem;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 45%;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navigation a:hover {
+  color: #c8a97e;
+  text-shadow: 0 0 0 2px rgb(47, 3, 3);
+}
+
+.navigation li {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navigation li:hover {
+  color: #c8a97e;
+  text-shadow: 0 0 0 2px rgb(47, 3, 3);
+}
+
+.reservation {
+  border: 2px solid #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.3rem 2rem;
+}
+
+.title {
+  margin-top: -2rem;
+  width: 100%;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 0 2px rgb(47, 3, 3);
+  line-height: 1;
+}
+
+.title h1 {
+  color: #c8a97e;
+  font-size: 5rem;
+}
+
+.title p {
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.logout {
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.logout:hover {
+  color: #c8a97e;
+  text-shadow: 0 0 0 2px rgb(47, 3, 3);
+}

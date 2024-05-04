@@ -1,0 +1,67 @@
+.menuOption {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.menuOption img {
+  width: 100%;
+}
+
+.option {
+  border: 1px solid #c4ab9f7b;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s;
+}
+
+.option:hover {
+  box-shadow: 0 0 50px 2px #c4ab9f49;
+}
+
+.option h2 {
+  font-size: 3.5rem;
+  color: #c4ab9f;
+  border: 2.5px solid #c4ab9f;
+  width: fit-content;
+  line-height: 1;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.mealName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+.mealName h3,
+.mealName p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.dishes {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.orderBtn {
+  text-decoration: none;
+  color: #c4ab9f;
+  font-size: 1.7rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1.5rem;
+  width: fit-content;
+  border-bottom: 1px solid #fff;
+}
+
+.orderBtn:hover {
+  border-color: #c4ab9f;
+}

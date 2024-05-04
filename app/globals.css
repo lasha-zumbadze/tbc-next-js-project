@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #c2a4957b;
+}
+
+.home {
+  background: url("../public/images/home.jpg.webp");
+  height: 100vh;
+}
+
+.menu {
+  background: url("../public/images/menu.jpg.webp");
+  height: 75vh;
+}
+
+.blogs {
+  background: url("../public/images/blog.jpg.webp");
+  height: 75vh;
+}
+
+.contact {
+  background: url("../public/images/contact.jpg.webp");
+  height: 75vh;
+}

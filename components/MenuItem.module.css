@@ -1,0 +1,75 @@
+.menuItem {
+  display: flex;
+  white-space: pre;
+  overflow: hidden;
+}
+
+.menuItem:nth-child(3) img,
+.menuItem:nth-child(4) img {
+  order: 1;
+}
+
+.menuItem img {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.menuItem img:hover {
+  transform: scale(1.1);
+}
+
+.meal {
+  border: 1px solid #e6e6e6;
+  padding: 2rem 2.5rem;
+  display: grid;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  width: calc(100% - 5rem);
+}
+
+.meal h4 {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.mealTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  margin-bottom: 3rem;
+  color: #c8a97e;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.ingredients {
+  font-size: 1.8rem;
+  /* padding-right: 2rem; */
+}
+
+.orderMeal {
+  border: none;
+  background-color: #c8a97e;
+  color: #fff;
+  font-family: inherit;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  justify-self: flex-start;
+  align-self: center;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.orderMeal:hover {
+  background-color: #fff;
+  color: #c8a97e;
+  font-weight: 500;
+  outline: 1px solid #c8a97e;
+}
