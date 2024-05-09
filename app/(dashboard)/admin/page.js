@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import userImg from "../../../public/images/user.png";
 import DeleteButton from "@/components/delete user button/DeleteButton";
-import AddNewButton from "@/components/add user button/AddNewButton";
 import Link from "next/link";
 
 async function UsersPage() {

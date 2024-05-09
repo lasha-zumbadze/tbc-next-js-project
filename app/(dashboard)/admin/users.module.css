@@ -1,9 +1,6 @@
 .adminContainer {
   margin: 0 auto;
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .users {
@@ -69,7 +66,7 @@
   cursor: pointer;
   transition: all 0.1s;
   border-radius: 5px;
-  width: fit-content;
+  margin-top: 1.5rem;
 }
 
 .addNewUser:hover {
