@@ -1,5 +1,5 @@
 .modalForm {
-  background-color: #c8a97e00;
+  background-color: #c8a97e2b;
   width: 35rem;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   align-items: center;
   border-radius: 15px;
   padding: 5rem;
-  box-shadow: 0 3px 50px #c8a97e;
+  box-shadow: 0 3px 50px #828282;
   margin-bottom: 3.5rem;
 }
 

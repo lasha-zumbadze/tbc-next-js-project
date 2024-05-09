@@ -33,3 +33,8 @@ body {
   background: url("../public/images/contact.jpg.webp");
   height: 75vh;
 }
+
+.admin {
+  background: url("../public/images/reservations.png");
+  height: 50vh;
+}

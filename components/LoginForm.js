@@ -33,8 +33,8 @@ function Login() {
         >
           Log in
         </button>
-        <p>username: atuny0</p>
-        <p>pass: 9uQFF1Lh</p>
+        {/* <p>username: atuny0</p>
+        <p>pass: 9uQFF1Lh</p> */}
       </form>
     </div>
   );

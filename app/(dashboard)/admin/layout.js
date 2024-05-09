@@ -1,6 +1,6 @@
-import Modal from "@/components/Modal";
+import Modal from "../../../components/Modal";
 
-function LoginLayout({ children }) {
+function AdminLayout({ children }) {
   return (
     <div>
       {children}
@@ -9,4 +9,4 @@ function LoginLayout({ children }) {
   );
 }
 
-export default LoginLayout;
+export default AdminLayout;
