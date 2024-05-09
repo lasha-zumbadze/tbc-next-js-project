@@ -1,0 +1,85 @@
+.adminContainer {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.users {
+  width: 100%;
+  text-align: left;
+  background-color: #ffebe2;
+}
+
+.tableHead {
+  background-color: #e4cdab;
+}
+
+.tableBody {
+  box-shadow: inset 0 0 50px #c8a97e;
+}
+
+.users th {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.users td {
+  font-size: 1.8rem;
+  background-color: #e9e6e2dd;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #ffffff;
+}
+
+.users td:last-child {
+  padding: 1rem;
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.userName img {
+  width: 3rem;
+}
+
+.users .tableBody .ageRow {
+  width: 15%;
+  padding-left: 3rem;
+}
+
+.users .tableBody .correctRow {
+  padding-right: 0;
+}
+
+.correctRow {
+  text-align: center;
+}
+
+.addNewUser {
+  border: none;
+  background-color: #c8a97e;
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.addNewUser:hover {
+  outline: 3px solid #c8a97e;
+  background-color: #c2a49500;
+  color: #c8a97e;
+}
+
+/* .deleteUser {
+  color: rgb(191, 49, 49);
+  font-size: 2.5rem;
+  margin-left: 3rem;
+} */

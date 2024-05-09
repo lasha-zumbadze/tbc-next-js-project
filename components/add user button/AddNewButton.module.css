@@ -1,0 +1,18 @@
+.addNewUser {
+  border: none;
+  background-color: #ac7e3d;
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.addNewUser:hover {
+  outline: 3px solid #a27434;
+  background-color: #c2a49500;
+  color: #a27434;
+}

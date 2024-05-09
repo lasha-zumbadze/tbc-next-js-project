@@ -21,6 +21,7 @@ function Header({ pageClass, title, subtitle }) {
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contant</Link>
           <Link href="/profile">Profile</Link>
+          <Link href="/admin">Admin</Link>
         </ul>
         <div className={styles.reservation}>
           <span>Reservation: </span>+995 123 456 789
