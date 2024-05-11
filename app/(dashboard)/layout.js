@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { ShoppingCartProvider } from "@/context/ShoppingCartContext";
 
 function DashboardLayout({ children }) {
   const cookieStory = cookies();
@@ -9,7 +10,11 @@ function DashboardLayout({ children }) {
     redirect("/login");
   }
 
-  return <div>{children}</div>;
+  return (
+    <div>
+      <ShoppingCartProvider>{children}</ShoppingCartProvider>
+    </div>
+  );
 }
 
 export default DashboardLayout;

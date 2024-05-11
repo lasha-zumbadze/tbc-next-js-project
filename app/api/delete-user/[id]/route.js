@@ -13,5 +13,10 @@ export async function DELETE(request) {
 
   const users = await sql`SELECT * FROM users;`;
 
-  return NextResponse.json({ users }, { status: 200 });
+  return NextResponse.json(
+    { users },
+    {
+      status: 200,
+    }
+  );
 }

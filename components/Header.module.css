@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 20rem;
+  padding: 1.2rem 20rem;
+  background: linear-gradient(#4e340f, #1f1405);
 }
 
 .navigation ul {
@@ -44,7 +45,7 @@
   border: 2px solid #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 1.3rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .title {

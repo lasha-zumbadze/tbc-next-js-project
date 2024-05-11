@@ -4,8 +4,9 @@ import { logout } from "@/app/action";
 import styles from "./Header.module.css";
 import Logo from "./Logo";
 import Link from "next/link";
+import ShoppingCartBtn from "./store/ShoppingCartBtn";
 
-function Header({ pageClass, title, subtitle }) {
+function Header({ pageClass, title, subtitle, children }) {
   return (
     <header
       className={`bg-cover bg-center bg-no-repeat relative w-full ${pageClass}`}
@@ -14,8 +15,9 @@ function Header({ pageClass, title, subtitle }) {
         <Logo />
         <ul>
           <Link href="/">Home</Link>
-          <li>About us</li>
-          <Link href="/menu">Menu</Link>
+          {/* <li>About us</li> */}
+          {/* <Link href="/menu">Menu</Link> */}
+          <Link href="/meals">Meals</Link>
           {/* <li>Delivery</li> */}
           <Link href="/products">Products</Link>
           <Link href="/blog">Blog</Link>
@@ -26,6 +28,7 @@ function Header({ pageClass, title, subtitle }) {
         <div className={styles.reservation}>
           <span>Reservation: </span>+995 123 456 789
         </div>
+        <ShoppingCartBtn />
         <button onClick={() => logout()} className={styles.logout}>
           Log out
         </button>

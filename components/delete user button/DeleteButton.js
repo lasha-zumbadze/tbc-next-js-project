@@ -1,25 +1,16 @@
 "use client";
-import { useRouter } from "next/navigation";
+
 import styles from "./DeleteButton.module.css";
-import { BASE_URL } from "@/api";
+import { deleteUser } from "@/app/action";
 
 function DeleteButton({ id }) {
-  const router = useRouter();
-
-  async function handleDelete() {
-    await fetch(`${BASE_URL}/api/delete-user/${id}`, {
-      method: "DELETE",
-    });
-  }
-
   return (
     <button
-      onClick={() => {
-        handleDelete();
-      }}
-      className={styles.deleteUser}
+      onClick={() => deleteUser(id)}
+      className={styles.deleteBtn}
+      // className="border-none bg-[#ac7e3dd2] text-[2rem] py-[1rem] px-[2rem] text-white cursor-pointer transition-all duration-[0.1s] rounded-md w-fit hover:outline hover:outline-[#a27434] hover:bg-[#c2a49500] hover:text-[#a27434]"
     >
-      X
+      {/* Delete */}❌
     </button>
   );
 }

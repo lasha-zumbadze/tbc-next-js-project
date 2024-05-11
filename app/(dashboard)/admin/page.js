@@ -6,6 +6,8 @@ import userImg from "../../../public/images/user.png";
 import DeleteButton from "@/components/delete user button/DeleteButton";
 import Link from "next/link";
 import Header from "@/components/Header";
+import CreateUserForm from "@/components/CreateUserForm";
+import EditUserForm from "@/components/EditUserForm";
 
 async function UsersPage() {
   const users = await getUsers();
@@ -33,18 +35,30 @@ async function UsersPage() {
                 <td>{user.email}</td>
                 <td className={styles.ageRow}>{user.age}</td>
                 <td className={styles.correctRow}>
-                  <button className={styles.editUser}>✏️</button>
+                  <Link
+                    href={`?modal=edit&name=${user.name}&email=${user.email}&age=${user.age}`}
+                  >
+                    <button className={styles.editUser}>✏️</button>
+                  </Link>
                   <DeleteButton id={user.id} />
+
+                  {/* <Link href={`?modal=delete&id=${user.id}`}>
+                    <button className={styles.deleteBtn}>X</button>
+                  </Link> */}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Link href="?modal=true">
+        <Link href="?modal=new">
           <button type="button" className={styles.addNewUser}>
             Add new
           </button>
         </Link>
+        <div className="flex">
+          <CreateUserForm />
+          <EditUserForm />
+        </div>
       </div>
     </div>
   );

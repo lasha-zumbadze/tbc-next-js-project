@@ -4,7 +4,7 @@ function AdminLayout({ children }) {
   return (
     <div>
       {children}
-      <Modal />
+      {/* <Modal /> */}
     </div>
   );
 }
