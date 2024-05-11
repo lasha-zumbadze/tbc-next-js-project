@@ -32,11 +32,11 @@ function StoreItem({ id, title, price, images }) {
           <p className="text-4xl w-80">{title}</p>
           <p className="text-3xl text-gray-500 ml-4">{formatCurrency(price)}</p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center min-h-28">
           {quantity === 0 ? (
             <button
               onClick={() => increaseCartQuantity(id)}
-              className="bg-blue-500 text-white rounded-lg py-3 w-2/3 mb-16 text-3xl"
+              className="bg-blue-500 text-white rounded-lg py-3 w-2/3 mb-12 text-3xl"
             >
               + Add To Cart
             </button>

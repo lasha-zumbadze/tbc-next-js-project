@@ -1,9 +1,8 @@
 import { useShoppingCart } from "@/context/ShoppingCartContext";
-import storeItems from "../../data/items.json";
 import Image from "next/image";
 import { formatCurrency } from "@/utilities/formatCurrency";
 
-function CartItem({ id, quantity }) {
+function CartItem({ id, quantity, storeItems }) {
   const { removeFromCart } = useShoppingCart();
   const item = storeItems.find((item) => item.id === id);
 
@@ -13,8 +12,8 @@ function CartItem({ id, quantity }) {
     <>
       <div className="flex items-center shadow-md shadow-slate-400 rounded-md overflow-hidden">
         <Image
-          src={item.imgUrl}
-          alt={item.name}
+          src={item.images[0]}
+          alt={item.title}
           style={{ objectFit: "cover", aspectRatio: "3/1.5" }}
           width={300}
           height={300}
@@ -22,7 +21,7 @@ function CartItem({ id, quantity }) {
         <div className="w-full flex items-center justify-between px-5">
           <div className="flex flex-col gap-3">
             <div className="text-4xl flex gap-3 items-center">
-              {item.name}
+              {item.title}
               {quantity > 1 && (
                 <span className="text-3xl text-gray-500">x{quantity}</span>
               )}
