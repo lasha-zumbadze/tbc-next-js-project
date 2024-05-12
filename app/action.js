@@ -1,6 +1,6 @@
 "use server";
 
-import { BASE_URL } from "@/api";
+import { BASE_URL } from "@/utilities/api";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 

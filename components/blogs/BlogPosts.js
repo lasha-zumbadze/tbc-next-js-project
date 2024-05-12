@@ -1,12 +1,7 @@
-import blog_1 from "../public/images/blog_1.png";
-import blog_2 from "../public/images/blog_2.png";
-import blog_3 from "../public/images/blog_3.png";
-import blog_4 from "../public/images/blog_4.png";
-import blog_5 from "../public/images/blog_5.png";
-import blog_6 from "../public/images/blog_6.png";
+import blog_1 from "../../public/images/blog_1.png";
 
 import Blog from "./Blog";
-import Search from "../components/Search";
+import Search from "./Search";
 
 import styles from "./BlogPosts.module.css";
 import { useState } from "react";

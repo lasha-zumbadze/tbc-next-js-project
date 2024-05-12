@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import styles from "./AddNewButton.module.css";
-import { BASE_URL } from "@/api";
+import { BASE_URL } from "@/utilities/api";
 
 function AddNewButton({ pathname, name, email, age }) {
   const router = useRouter();

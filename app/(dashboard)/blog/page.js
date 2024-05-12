@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BlogPosts from "../../../components/BlogPosts";
+import BlogPosts from "../../../components/blogs/BlogPosts";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 

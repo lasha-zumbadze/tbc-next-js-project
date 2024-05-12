@@ -11,7 +11,7 @@
 .navigation ul {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 45%;
   font-size: 1.8rem;
   letter-spacing: -1px;
@@ -19,14 +19,14 @@
   margin-right: 2rem;
 }
 
-.navigation a {
+.navigation a:not(.logo) {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.navigation a:hover {
+.navigation a:not(.logo):hover {
   color: #c8a97e;
   text-shadow: 0 0 0 2px rgb(47, 3, 3);
 }

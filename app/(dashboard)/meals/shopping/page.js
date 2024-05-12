@@ -1,8 +1,4 @@
-import CartItem from "@/components/store/CartItem";
-import storeItems from "../../../../data/items.json";
-import { useShoppingCart } from "@/context/ShoppingCartContext";
-import { formatCurrency } from "@/utilities/formatCurrency";
-import ShoppingItems from "@/components/store/ShoppingItems";
+import ShoppingItems from "@/components/meal store/ShoppingItems";
 
 async function getProducts() {
   const res = await fetch("https://dummyjson.com/products");

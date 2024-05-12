@@ -23,6 +23,6 @@
 .menuContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 20rem;
+  padding: 0 18rem;
   margin: 0 auto;
 }

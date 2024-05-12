@@ -27,7 +27,7 @@ function ShoppingItems({ storeItems }) {
     );
   } else {
     return (
-      <h1 className="text-8xl text-center italic min-h-screen pt-20">
+      <h1 className="text-8xl text-center italic min-h-screen pt-28">
         No selected menu
       </h1>
     );

@@ -1,8 +1,8 @@
 import styles from "./Services.module.css";
 
-import birthdayIcon from "../public/images/birthday-icon.png";
-import meetingIcon from "../public/images/meeting-icon.png";
-import weddingIcon from "../public/images/wedding-icon.png";
+import birthdayIcon from "../../public/images/birthday-icon.png";
+import meetingIcon from "../../public/images/meeting-icon.png";
+import weddingIcon from "../../public/images/wedding-icon.png";
 import ServiceItem from "./ServiceItem";
 
 const serviceData = [

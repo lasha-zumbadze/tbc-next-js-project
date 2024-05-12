@@ -1,11 +1,11 @@
 import styles from "./MenuContent.module.css";
 
-import breakfastImg1 from "../public/images/breakfast-1.png";
-import breakfastImg2 from "../public/images/breakfast-2.png";
-import breakfastImg3 from "../public/images/breakfast-3.png";
-import breakfastImg4 from "../public/images/breakfast-4.png";
-import breakfastImg5 from "../public/images/breakfast-5.png";
-import breakfastImg6 from "../public/images/breakfast-6.png";
+import breakfastImg1 from "../../public/images/breakfast-1.png";
+import breakfastImg2 from "../../public/images/breakfast-2.png";
+import breakfastImg3 from "../../public/images/breakfast-3.png";
+import breakfastImg4 from "../../public/images/breakfast-4.png";
+import breakfastImg5 from "../../public/images/breakfast-5.png";
+import breakfastImg6 from "../../public/images/breakfast-6.png";
 import MenuItem from "./MenuItem";
 
 const menuData = [

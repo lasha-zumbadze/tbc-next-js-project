@@ -1,20 +1,20 @@
-import { getUsers } from "@/api";
+import { getUsers } from "@/utilities/api";
 import styles from "./users.module.css";
 import Image from "next/image";
 
 import userImg from "../../../public/images/user.png";
-import DeleteButton from "@/components/delete user button/DeleteButton";
+import DeleteButton from "@/components/admins/DeleteButton";
 import Link from "next/link";
 import Header from "@/components/Header";
-import CreateUserForm from "@/components/CreateUserForm";
-import EditUserForm from "@/components/EditUserForm";
+import CreateUserForm from "@/components/admins/CreateUserForm";
+import EditUserForm from "@/components/admins/EditUserForm";
 
 async function UsersPage() {
   const users = await getUsers();
 
   return (
     <div>
-      <Header pageClass="admin" title="The Venue" subtitle="Users" />
+      <Header />
       <div className={styles.usersContainer}>
         <table className={styles.users}>
           <thead className={styles.tableHead}>

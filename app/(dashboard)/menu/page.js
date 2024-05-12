@@ -2,7 +2,7 @@ import styles from "./Menu.module.css";
 import starter from "../../../public/images/starters.png";
 import main from "../../../public/images/main.png";
 import deserts from "../../../public/images/deserts.png";
-import MenuOption from "../../../components/MenuOption";
+import MenuOption from "../../../components/menus/MenuOption";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 

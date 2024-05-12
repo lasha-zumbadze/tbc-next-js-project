@@ -1,8 +1,8 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Services from "../../components/Services";
+import Services from "../../components/services/Services";
 import About from "../../components/About";
-import Menu from "../../components/MenuContent";
+import Menu from "../../components/menus/MenuContent";
 
 function Home() {
   return (

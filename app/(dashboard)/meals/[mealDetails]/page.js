@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ProductDetails from "@/components/ProductDetails";
+import ProductDetails from "@/components/meal store/ProductDetails";
 
 async function getData(id) {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
@@ -9,18 +7,14 @@ async function getData(id) {
 }
 
 async function Detail({ params }) {
-  const { productDetail } = params;
-  const product = await getData(productDetail);
+  const { mealDetails } = params;
+  const product = await getData(mealDetails);
 
   return (
     <>
-      <Header pageClass="blogs" title="The Venue" subtitle="Products" />
-
       <div className="flex justify-center items-center h-screen">
         <ProductDetails product={product} />
       </div>
-
-      <Footer />
     </>
   );
 }

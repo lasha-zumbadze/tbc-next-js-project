@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./Profile.module.css";
-import Navigation from "../../../components/Navigation";
 import { useState } from "react";
+import Header from "@/components/Header";
 
 function Profile() {
   const [name, setName] = useState("");
@@ -13,7 +13,7 @@ function Profile() {
 
   return (
     <>
-      <Navigation />
+      <Header />
       <div className={styles.profilePage}>
         <h2>Create Profile</h2>
         <form className={styles.profileForm}>

@@ -1,10 +1,10 @@
 "use client";
 
 import { useShoppingCart } from "@/context/ShoppingCartContext";
-import { formatCurrency } from "@/utilities/formatCurrency";
+import styles from "./ProductDetails.module.css";
 import Image from "next/image";
 
-function StoreItem({ id, title, price, images }) {
+function ProductDetails({ product }) {
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -12,10 +12,10 @@ function StoreItem({ id, title, price, images }) {
     removeFromCart,
   } = useShoppingCart();
 
-  const quantity = getItemQuantity(id);
+  const quantity = getItemQuantity(product.id);
 
   return (
-    <div className=" shadow-slate-400 shadow-lg rounded-xl overflow-hidden">
+    <div className={styles.productDetails}>
       <Image
         style={{
           objectFit: "cover",
@@ -24,18 +24,18 @@ function StoreItem({ id, title, price, images }) {
         }}
         width={500}
         height={500}
-        src={images[0]}
-        alt={title}
+        src={product.images[0]}
+        alt={product.title}
       />
-      <div>
-        <div className="flex justify-between px-6 mt-8 h-40">
-          <p className="text-4xl w-80">{title}</p>
-          <p className="text-3xl text-gray-500 ml-4">{formatCurrency(price)}</p>
-        </div>
+      <div className={styles.details}>
+        <h2 className={styles.title}>{product.title}</h2>
+        <p className={styles.description}>{product.description}</p>
+        <p className={styles.price}>{product.price}$</p>
+
         <div className="flex justify-center min-h-28">
           {quantity === 0 ? (
             <button
-              onClick={() => increaseCartQuantity(id)}
+              onClick={() => increaseCartQuantity(product.id)}
               className="bg-blue-500 text-white rounded-lg py-3 w-2/3 mb-12 text-3xl"
             >
               + Add To Cart
@@ -44,7 +44,7 @@ function StoreItem({ id, title, price, images }) {
             <div className="flex flex-col items-center gap-3">
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => decreaseCartQuantity(id)}
+                  onClick={() => decreaseCartQuantity(product.id)}
                   className="bg-blue-500 w-10 h-10 text-white text-4xl flex justify-center items-center rounded-md pb-1"
                 >
                   -
@@ -53,7 +53,7 @@ function StoreItem({ id, title, price, images }) {
                   <span className="text-3xl">{quantity}</span> in cart
                 </div>
                 <button
-                  onClick={() => increaseCartQuantity(id)}
+                  onClick={() => increaseCartQuantity(product.id)}
                   className="bg-blue-500 w-10 h-10 text-white text-3xl flex justify-center items-center rounded-md pb-1"
                 >
                   +
@@ -61,7 +61,7 @@ function StoreItem({ id, title, price, images }) {
               </div>
               <div>
                 <button
-                  onClick={() => removeFromCart(id)}
+                  onClick={() => removeFromCart(product.id)}
                   className="bg-red-500 text-white text-2xl flex justify-center items-center rounded-md px-3 py-2 mb-3"
                 >
                   Remove
@@ -75,4 +75,4 @@ function StoreItem({ id, title, price, images }) {
   );
 }
 
-export default StoreItem;
+export default ProductDetails;

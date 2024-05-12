@@ -3,15 +3,12 @@ import styles from "./Modal.module.css";
 import { useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
-import AddNewButton from "./add user button/AddNewButton";
-import DeleteButton from "./delete user button/DeleteButton";
+import AddNewButton from "./admins/AddNewButton";
+import DeleteButton from "./admins/DeleteButton";
 
 function Modal() {
   const searchParams = useSearchParams();
   const modal = searchParams.get("modal");
-  const userName = searchParams.get("name");
-  const userEmail = searchParams.get("email");
-  const userAge = searchParams.get("age");
   const userId = searchParams.get("id");
   const pathname = usePathname();
 

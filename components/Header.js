@@ -4,7 +4,7 @@ import { logout } from "@/app/action";
 import styles from "./Header.module.css";
 import Logo from "./Logo";
 import Link from "next/link";
-import ShoppingCartBtn from "./store/ShoppingCartBtn";
+import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
 
 function Header({ pageClass, title, subtitle, children }) {
   return (
@@ -12,15 +12,16 @@ function Header({ pageClass, title, subtitle, children }) {
       className={`bg-cover bg-center bg-no-repeat relative w-full ${pageClass}`}
     >
       <nav className={styles.navigation}>
-        <Logo />
+        <Link className={styles.logo} href="/">
+          <Logo />
+        </Link>
         <ul>
           <Link href="/">Home</Link>
           {/* <li>About us</li> */}
-          {/* <Link href="/menu">Menu</Link> */}
           <Link href="/meals">Meals</Link>
           {/* <li>Delivery</li> */}
-          <Link href="/products">Products</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/menu">Menu</Link>
           <Link href="/contact">Contant</Link>
           <Link href="/profile">Profile</Link>
           <Link href="/admin">Admin</Link>
