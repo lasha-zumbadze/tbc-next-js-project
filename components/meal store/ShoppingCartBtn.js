@@ -10,9 +10,10 @@ function ShoppingCartBtn() {
     // <button className="w-10 h-10 relative">
     <Link href="/meals/shopping" className="relative">
       <svg
+        style={{ fill: "white" }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512"
-        fill="white"
+        // fill="white"
         width={30}
         height={30}
       >

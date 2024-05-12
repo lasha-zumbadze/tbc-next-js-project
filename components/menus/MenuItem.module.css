@@ -24,7 +24,7 @@
   padding: 2rem 2.5rem;
   display: grid;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
   background-color: #fff;
   width: calc(100% - 5rem);
 }

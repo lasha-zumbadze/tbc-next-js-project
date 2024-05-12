@@ -6,6 +6,10 @@
   align-items: center;
   padding: 1.2rem 20rem;
   background: linear-gradient(#4e340f, #1f1405);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
 }
 
 .navigation ul {

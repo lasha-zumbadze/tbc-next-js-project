@@ -9,7 +9,7 @@ import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
 function Header({ pageClass, title, subtitle, children }) {
   return (
     <header
-      className={`bg-cover bg-center bg-no-repeat relative w-full ${pageClass}`}
+      className={`bg-cover bg-center bg-no-repeat relative w-full sti ${pageClass}`}
     >
       <nav className={styles.navigation}>
         <Link className={styles.logo} href="/">

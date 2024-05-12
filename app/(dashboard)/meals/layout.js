@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 function StoreLayout({ children }) {
   return (
     <div>
-      <Header />
+      <Header pageClass="menu" title="The Venue" subtitle="Meals" />
       {children}
       <Footer />
     </div>

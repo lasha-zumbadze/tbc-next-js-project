@@ -118,9 +118,13 @@ function Menu() {
       <Header pageClass="menu" title="The Venue" subtitle="The Menu" />
       <main>
         <section className={styles.menu}>
-          <div className={styles.menuTitle}>
-            <h2 className="font-alexBrush">Something new</h2>
-            <h3>Discover Our Menu</h3>
+          <div className="flex flex-col items-center">
+            <h1 className="font-alexBrush text-[5rem] text-[#a68250]">
+              Something new
+            </h1>
+            <h2 className="text-[5rem] -mt-[4.5rem] italic">
+              Discover Our Menu
+            </h2>
           </div>
           <div className={styles.aboutMenu}>
             <p>
