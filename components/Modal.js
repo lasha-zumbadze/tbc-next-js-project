@@ -1,20 +1,13 @@
 "use client";
 import styles from "./Modal.module.css";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import DeleteButton from "./admins/DeleteButton";
 import CreateUserForm from "./admins/CreateUserForm";
 
-function Modal() {
+function Modal({ userId }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const modal = searchParams.get("modal");
-  const userId = searchParams.get("id");
-  const pathname = usePathname();
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [age, setAge] = useState("");
 
   return (
     <>
@@ -48,20 +41,22 @@ function Modal() {
               )} */}
 
               {modal === "delete" && (
-                <div>
-                  <p className={styles.deleteString}>
-                    Are you sure you want to delete the user?
-                  </p>
-                  <div className="flex gap-10 justify-center">
-                    <DeleteButton id={userId} />
+                <div className={styles.deleteBox}>
+                  <div className="p-12 ">
+                    <p className={styles.deleteString}>
+                      Are you sure you want to delete the user?
+                    </p>
+                    <div className="flex gap-10 justify-center">
+                      <DeleteButton id={userId} />
 
-                    <button
-                      onClick={() => router.push("/admin")}
-                      type="button"
-                      className="border-none bg-[#ac7e3dd2] text-[2rem] py-[1rem] px-[2rem] text-white cursor-pointer transition-all duration-[0.1s] rounded-md w-fit hover:outline hover:outline-[#a27434] hover:bg-[#c2a49500] hover:text-[#a27434]"
-                    >
-                      Cancel
-                    </button>
+                      <button
+                        onClick={() => router.push("/admin")}
+                        type="button"
+                        className="border-none bg-[#ac7e3dd2] text-[2rem] py-[1rem] px-[2rem] text-white cursor-pointer transition-all duration-[0.1s] rounded-md w-fit hover:outline hover:outline-[#a27434] hover:bg-[#c2a49500] hover:text-[#a27434]"
+                      >
+                        Cancel
+                      </button>
+                    </div>
                   </div>
                 </div>
               )}
