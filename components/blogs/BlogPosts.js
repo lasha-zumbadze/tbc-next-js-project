@@ -3,7 +3,6 @@ import blog_1 from "../../public/images/blog_1.png";
 import Blog from "./Blog";
 import Search from "./Search";
 
-import styles from "./BlogPosts.module.css";
 import { useState } from "react";
 
 function BlogPosts({ blogs }) {
@@ -12,7 +11,7 @@ function BlogPosts({ blogs }) {
   return (
     <>
       <Search search={search} setSearch={setSearch} />
-      <div className={styles.blogPosts}>
+      <div className="justify-center gap-y-12 gap-x-20 w-4/5 m-auto py-32 px-20 grid grid-cols-2">
         {!search
           ? blogs.map((blog) => (
               <Blog

@@ -1,7 +1,6 @@
 "use client";
 
 import { useShoppingCart } from "@/context/ShoppingCartContext";
-import styles from "./ProductDetails.module.css";
 import Image from "next/image";
 
 function ProductDetails({ product }) {
@@ -15,22 +14,18 @@ function ProductDetails({ product }) {
   const quantity = getItemQuantity(product.id);
 
   return (
-    <div className={styles.productDetails}>
+    <div className="grid grid-cols-2 justify-items-center items-center w-4/5 py-40 gap-x-8 shadow-4xl">
       <Image
-        style={{
-          objectFit: "cover",
-          aspectRatio: "3/1.5",
-          boxShadow: "0 0 1px black",
-        }}
+        className="max-w-full object-cover aspect-[3/1.5] shadow-xl"
         width={500}
         height={500}
         src={product.images[0]}
         alt={product.title}
       />
-      <div className={styles.details}>
-        <h2 className={styles.title}>{product.title}</h2>
-        <p className={styles.description}>{product.description}</p>
-        <p className={styles.price}>{product.price}$</p>
+      <div className="flex flex-col p-4 gap-20">
+        <h2 className="text-5xl">{product.title}</h2>
+        <p className="text-[1.6rem]">{product.description}</p>
+        <p className="text-5xl">{product.price}$</p>
 
         <div className="flex justify-center min-h-28">
           {quantity === 0 ? (

@@ -1,13 +1,13 @@
-import { getUsers } from "@/utilities/api";
+import { getUsers } from "@/api";
 import styles from "./users.module.css";
 import Image from "next/image";
 
 import userImg from "../../../public/images/user.png";
-import DeleteButton from "@/components/admins/DeleteButton";
 import Link from "next/link";
 import Header from "@/components/Header";
-import CreateUserForm from "@/components/admins/CreateUserForm";
 import EditUserForm from "@/components/admins/EditUserForm";
+import Modal from "@/components/Modal";
+import DeleteButton from "@/components/admins/DeleteButton";
 
 async function UsersPage() {
   const users = await getUsers();
@@ -15,6 +15,7 @@ async function UsersPage() {
   return (
     <div>
       <Header />
+
       <div className={styles.usersContainer}>
         <table className={styles.users}>
           <thead className={styles.tableHead}>
@@ -42,7 +43,7 @@ async function UsersPage() {
                   </Link>
                   <DeleteButton id={user.id} />
 
-                  {/* <Link href={`?modal=delete&id=${user.id}`}>
+                  {/* <Link href="?modal=delete">
                     <button className={styles.deleteBtn}>X</button>
                   </Link> */}
                 </td>
@@ -55,11 +56,9 @@ async function UsersPage() {
             Add new
           </button>
         </Link>
-        <div className="flex">
-          <CreateUserForm />
-          <EditUserForm />
-        </div>
+        <div className="flex">{/* <EditUserForm /> */}</div>
       </div>
+      <Modal />
     </div>
   );
 }

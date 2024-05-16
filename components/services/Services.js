@@ -1,5 +1,3 @@
-import styles from "./Services.module.css";
-
 import birthdayIcon from "../../public/images/birthday-icon.png";
 import meetingIcon from "../../public/images/meeting-icon.png";
 import weddingIcon from "../../public/images/wedding-icon.png";
@@ -28,12 +26,16 @@ const serviceData = [
 
 function Services() {
   return (
-    <section className={styles.services}>
-      <div className={styles.servicesTitle}>
-        <h2 className="font-alexBrush">Services</h2>
-        <h3>Catering Services</h3>
+    <section className="py-40 flex flex-col items-center gap-40 bg-[#6c757d0d] mt-24">
+      <div>
+        <h2 className="font-alexBrush text-[#c8a97e] text-[11rem] leading-[0] text-center font-normal">
+          Services
+        </h2>
+        <h3 className="text-8xl text-center font-semibold">
+          Catering Services
+        </h3>
       </div>
-      <div className={styles.servicesContainer}>
+      <div className="grid grid-cols-3 px-80 my-0 mx-auto items-center ">
         {serviceData.map((service, i) => (
           <ServiceItem
             icon={service.icon}
