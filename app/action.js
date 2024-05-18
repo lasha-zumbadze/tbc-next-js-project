@@ -38,7 +38,7 @@ export async function login(formData) {
 
   if (user.token) {
     const cookieStory = cookies();
-    cookieStory.set("user", JSON.stringify(user));
+    cookieStory.set("user", JSON.stringify(user.token));
 
     redirect("/");
   }
@@ -85,10 +85,10 @@ export async function deleteUser(id) {
   redirect("/admin");
 }
 
-export async function editUser(id) {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const age = formData.get("age");
+export async function updateUser(id, name, email, age) {
+  // const name = formData.get("name");
+  // const email = formData.get("email");
+  // const age = formData.get("age");
 
   const userData = {
     name,
@@ -97,7 +97,9 @@ export async function editUser(id) {
   };
 
   await fetch(`${BASE_URL}/api/update-user/${id}`, {
-    method: "PATCH",
+    method: "PUT",
     body: JSON.stringify(userData),
   });
+  revalidatePath("/admin");
+  redirect("/admin");
 }

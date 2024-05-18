@@ -1,13 +1,15 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import styles from "./CreateUserForm.module.css";
 import { createUser } from "@/app/action";
 
-function CreateUserForm() {
-  const router = useRouter();
+function CreateUserForm({ setModal }) {
   return (
-    <form action={createUser} className={styles.form}>
+    <form
+      action={createUser}
+      onSubmit={() => setModal("")}
+      className={styles.form}
+    >
       <input type="text" placeholder="User name" name="name" />
       <input type="email" placeholder="User email" name="email" />
       <input type="number" placeholder="User age" name="age" />
@@ -17,7 +19,7 @@ function CreateUserForm() {
         </button>
 
         <button
-          onClick={() => router.push("/admin")}
+          onClick={() => setModal("")}
           type="button"
           className="border-none bg-[#ac7e3dd2] text-[2rem] px-8 text-white cursor-pointer transition-all duration-[0.1s] rounded-md w-fit hover:outline hover:outline-[#a27434] hover:bg-[#c2a49500] hover:text-[#a27434]"
         >

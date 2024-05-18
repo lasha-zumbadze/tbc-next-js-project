@@ -7,10 +7,11 @@ import userImg from "../../public/images/user.png";
 import Link from "next/link";
 import Modal from "../Modal";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Users({ users }) {
   const userId = useRef();
+  const [modal, setModal] = useState("");
 
   return (
     <>
@@ -34,35 +35,46 @@ function Users({ users }) {
                 <td>{user.email}</td>
                 <td className={styles.ageRow}>{user.age}</td>
                 <td className={styles.correctRow}>
-                  <Link
-                    href={`?modal=edit&name=${user.name}&email=${user.email}&age=${user.age}`}
+                  <button
+                    onClick={() => {
+                      userId.current = user.id;
+                      setModal("update");
+                    }}
+                    className={styles.editUser}
                   >
-                    <button className={styles.editUser}>✏️</button>
-                  </Link>
+                    ✏️
+                  </button>
 
-                  <Link href="?modal=delete">
-                    <button
-                      onClick={() => {
-                        userId.current = user.id;
-                      }}
-                      className={styles.deleteBtn}
-                    >
-                      X
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() => {
+                      userId.current = user.id;
+                      setModal("delete");
+                    }}
+                    className={styles.deleteBtn}
+                  >
+                    X
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Link href="?modal=new">
-          <button type="button" className={styles.addNewUser}>
-            Add new
-          </button>
-        </Link>
-        <div className="flex">{/* <EditUserForm /> */}</div>
+        <button
+          onClick={() => setModal("new")}
+          type="button"
+          className={styles.addNewUser}
+        >
+          Add new
+        </button>
       </div>
-      <Modal userId={userId.current} />
+      {modal && (
+        <Modal
+          users={users}
+          userId={userId.current}
+          modal={modal}
+          setModal={setModal}
+        />
+      )}
     </>
   );
 }

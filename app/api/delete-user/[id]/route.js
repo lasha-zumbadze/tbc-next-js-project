@@ -1,8 +1,8 @@
 import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 
-export async function DELETE(request) {
-  const id = request.nextUrl.pathname.replace("/api/delete-user/", "");
+export async function DELETE(_request, { params }) {
+  const id = params.id;
 
   try {
     if (!id) throw new Error("ID is required");

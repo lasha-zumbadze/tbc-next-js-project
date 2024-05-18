@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Users from "@/components/admins/UsersTable";
 
 async function AdminPage() {
-  const users = await getUsers();
+  const usersData = await getUsers();
+  const users = usersData.sort((a, b) => b.id - a.id);
 
   return (
     <div>

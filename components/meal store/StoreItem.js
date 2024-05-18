@@ -16,7 +16,7 @@ function StoreItem({ id, title, price, images }) {
   const quantity = getItemQuantity(id);
 
   return (
-    <div className=" shadow-slate-400 shadow-lg rounded-xl overflow-hidden">
+    <div className=" shadow-slate-400 shadow-lg rounded-xl overflow-hidden h-[38rem] flex flex-col gap-y-8 hover:scale-105 transition-all">
       <Image
         style={{
           objectFit: "cover",
@@ -28,8 +28,8 @@ function StoreItem({ id, title, price, images }) {
         src={images[0]}
         alt={title}
       />
-      <div>
-        <div className="flex justify-between px-6 mt-8 h-40">
+      <div className="h-full mt-auto flex flex-col gap-y-10">
+        <div className="flex justify-between px-6 h-40">
           <Link href={`/meals/${id}`}>
             <p className="text-4xl hover:underline w-fit">{title}</p>
           </Link>
