@@ -1,10 +1,5 @@
+import { getProducts } from "@/api";
 import StoreItem from "@/components/meal store/StoreItem";
-
-async function getProducts() {
-  const res = await fetch("https://dummyjson.com/products");
-  const data = await res.json();
-  return data.products;
-}
 
 async function Store() {
   const storeItems = await getProducts();

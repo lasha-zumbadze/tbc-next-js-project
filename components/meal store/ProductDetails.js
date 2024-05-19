@@ -1,18 +1,7 @@
-"use client";
-
-import { useShoppingCart } from "@/context/ShoppingCartContext";
 import Image from "next/image";
+import AddToCartBtn from "./AddToCartBtn";
 
 function ProductDetails({ product }) {
-  const {
-    getItemQuantity,
-    increaseCartQuantity,
-    decreaseCartQuantity,
-    removeFromCart,
-  } = useShoppingCart();
-
-  const quantity = getItemQuantity(product.id);
-
   return (
     <div className="grid grid-cols-2 justify-items-center items-center w-4/5 py-40 gap-x-8 shadow-4xl">
       <Image
@@ -27,44 +16,7 @@ function ProductDetails({ product }) {
         <p className="text-[1.6rem]">{product.description}</p>
         <p className="text-5xl">{product.price}$</p>
 
-        <div className="flex justify-center min-h-28">
-          {quantity === 0 ? (
-            <button
-              onClick={() => increaseCartQuantity(product.id)}
-              className="bg-blue-500 text-white rounded-lg py-3 w-2/3 mb-12 text-3xl"
-            >
-              + Add To Cart
-            </button>
-          ) : (
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => decreaseCartQuantity(product.id)}
-                  className="bg-blue-500 w-10 h-10 text-white text-4xl flex justify-center items-center rounded-md pb-1"
-                >
-                  -
-                </button>
-                <div className="text-2xl">
-                  <span className="text-3xl">{quantity}</span> in cart
-                </div>
-                <button
-                  onClick={() => increaseCartQuantity(product.id)}
-                  className="bg-blue-500 w-10 h-10 text-white text-3xl flex justify-center items-center rounded-md pb-1"
-                >
-                  +
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={() => removeFromCart(product.id)}
-                  className="bg-red-500 text-white text-2xl flex justify-center items-center rounded-md px-3 py-2 mb-3"
-                >
-                  Remove
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
+        <AddToCartBtn id={product.id} />
       </div>
     </div>
   );
