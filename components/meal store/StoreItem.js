@@ -5,7 +5,7 @@ import AddToCartBtn from "./AddToCartBtn";
 
 function StoreItem({ id, title, price, images }) {
   return (
-    <div className=" shadow-slate-400 shadow-lg rounded-xl overflow-hidden h-[38rem] flex flex-col gap-y-8 hover:scale-105 transition-all">
+    <div className=" shadow-slate-400 shadow-lg rounded-xl overflow-hidden w-[29rem] h-[38rem] flex flex-col gap-y-8 hover:scale-105 transition-all">
       <Image
         style={{
           objectFit: "cover",

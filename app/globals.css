@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -32,4 +36,28 @@ body {
 .contact {
   background: url("../public/images/contact.jpg.webp");
   height: 75vh;
+}
+
+.custom-date-picker {
+  position: relative;
+  background: url("../public/images/icons8-calendar-24.png") no-repeat right 3px
+    center;
+  background-size: 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.custom-date-picker::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.leaflet-container {
+  height: 50vh;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+  z-index: 1;
 }

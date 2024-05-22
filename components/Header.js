@@ -4,6 +4,7 @@ import { logout } from "@/app/action";
 import Logo from "./Logo";
 import Link from "next/link";
 import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
+import ThemeSwitch from "./ThemeSwitch";
 
 function Header({ pageClass, title, subtitle, children }) {
   return (
@@ -64,6 +65,7 @@ function Header({ pageClass, title, subtitle, children }) {
           <span>Reservation: </span>+995 123 456 789
         </div>
         <ShoppingCartBtn />
+        <ThemeSwitch />
         <button
           onClick={() => logout()}
           className="transition-all font-semibold text-4xl hover:text-[#c8a97e] hover:drop-shadow-3xl"

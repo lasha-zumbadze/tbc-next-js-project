@@ -1,22 +1,10 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import BlogPosts from "../../../components/blogs/BlogPosts";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
+import { getBlogs } from "@/api";
 
-function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    async function blogsData() {
-      const res = await fetch("https://dummyjson.com/posts");
-      const data = await res.json();
-      setBlogs(data.posts);
-    }
-
-    blogsData();
-  }, []);
+async function Blogs() {
+  const blogs = await getBlogs();
 
   return (
     <>

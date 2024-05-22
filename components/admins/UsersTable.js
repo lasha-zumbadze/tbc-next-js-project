@@ -4,7 +4,6 @@ import styles from "./UsersTable.module.css";
 
 import userImg from "../../public/images/user.png";
 
-import Link from "next/link";
 import Modal from "../Modal";
 import Image from "next/image";
 import { useRef, useState } from "react";

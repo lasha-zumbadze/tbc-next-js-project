@@ -1,3 +1,5 @@
+"use client";
+
 import blog_1 from "../../public/images/blog_1.png";
 
 import Blog from "./Blog";
@@ -11,7 +13,7 @@ function BlogPosts({ blogs }) {
   return (
     <>
       <Search search={search} setSearch={setSearch} />
-      <div className="justify-center gap-y-12 gap-x-20 w-4/5 m-auto py-32 px-20 grid grid-cols-2">
+      <div className="justify-center gap-y-24 gap-x-20 w-5/6 md:w-4/6 lg:-w-5/6 m-auto py-32 px-20 md:px-8 grid lg:grid-cols-2">
         {!search
           ? blogs.map((blog) => (
               <Blog

@@ -1,5 +1,4 @@
 "use client";
-import styles from "./Modal.module.css";
 import DeleteButton from "./admins/DeleteButton";
 import CreateUserForm from "./admins/CreateUserForm";
 import UpdateUserForm from "./admins/UpdateUserForm";
@@ -18,9 +17,9 @@ function Modal({ users, userId, modal, setModal }) {
           )}
 
           {modal === "delete" && (
-            <div className={styles.deleteBox}>
+            <div className="bg-[#c8a97e2b] rounded-2xl m-8 shadow-5xl">
               <div className="p-12 ">
-                <p className={styles.deleteString}>
+                <p className="text-[2rem] mb-14">
                   Are you sure you want to delete the user?
                 </p>
                 <div className="flex gap-10 justify-center">

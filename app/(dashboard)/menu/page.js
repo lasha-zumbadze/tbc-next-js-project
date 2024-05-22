@@ -1,4 +1,3 @@
-import styles from "./Menu.module.css";
 import starter from "../../../public/images/starters.png";
 import main from "../../../public/images/main.png";
 import deserts from "../../../public/images/deserts.png";
@@ -117,7 +116,7 @@ function Menu() {
     <>
       <Header pageClass="menu" title="The Venue" subtitle="The Menu" />
       <main>
-        <section className={styles.menu}>
+        <section className="pt-24 pb-40 flex flex-col items-center gap-12 w-4/5 m-auto">
           <div className="flex flex-col items-center">
             <h1 className="font-alexBrush text-[5rem] text-[#a68250]">
               Something new
@@ -126,8 +125,8 @@ function Menu() {
               Discover Our Menu
             </h2>
           </div>
-          <div className={styles.aboutMenu}>
-            <p>
+          <div className="flex gap-12 py-8 px-20">
+            <p className="text-2xl text-[#444] leading-[1.8]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               malesuada lorem maximus mauris scelerisque, at rutrum nulla
               dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
@@ -135,7 +134,7 @@ function Menu() {
               Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae
               aliquet dolor venenatis. Nulla consequat fringilla.
             </p>
-            <p>
+            <p className="text-2xl text-[#444] leading-[1.8]">
               Sit amet, consectetur adipiscing elit. Donec malesuada lorem
               maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula
               sapien. Suspendisse cursus faucibus finibus. Ut non justo
@@ -144,7 +143,7 @@ function Menu() {
               venenatis. Nulla consequat fringilla.
             </p>
           </div>
-          <div className={styles.menuOptions}>
+          <div className="grid grid-cols-3 mt-12 gap-x-12">
             {menuOptionsData.map((menu, i) => (
               <MenuOption
                 img={menu.img}

@@ -1,6 +1,6 @@
 function Logo({ titleFont, subtitleFont, letterSpace, color }) {
   return (
-    <div className="mr-20 leading-tight cursor-pointer -tracking-[2px]">
+    <div className="lg:mr-20 leading-tight cursor-pointer -tracking-[2px]">
       <p className="text-[3rem]" style={{ fontSize: `${titleFont}rem` }}>
         The Venue
       </p>

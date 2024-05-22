@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Alex_Brush, PT_Sans } from "next/font/google";
+import { Providers } from "./providers";
 
 const pt_sans = PT_Sans({
   subsets: ["latin"],
@@ -20,9 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${pt_sans.variable} ${alex_brush.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
