@@ -17,7 +17,7 @@ function ThemeSwitcher() {
     return () => setMounted(false);
   }, []);
 
-  if (!mounted) return <MdOutlineDownloading className="w-12 h-12" />;
+  if (!mounted) return <MdOutlineDownloading className="w-10 h-10" />;
 
   if (resolvedTheme === "dark") {
     return (

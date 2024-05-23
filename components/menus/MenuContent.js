@@ -70,7 +70,7 @@ const menuData = [
 function Menu() {
   return (
     <section className="flex flex-col items-center gap-24 md:pt-52 lg:pt-60 pt-40 pb-40">
-      <div>
+      <div className="md:mb-8">
         <h2 className="font-alexBrush text-[#c8a97e] text-8xl md:text-[8rem] lg:text-[11rem] font-normal leading-[0] text-center">
           Specialties
         </h2>

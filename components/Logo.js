@@ -1,4 +1,4 @@
-function Logo({ titleFont, subtitleFont, letterSpace, color }) {
+function Logo({ titleFont, subtitleFont, letterSpace }) {
   return (
     <div className="lg:mr-20 leading-tight cursor-pointer -tracking-[2px]">
       <p className="text-[3rem]" style={{ fontSize: `${titleFont}rem` }}>

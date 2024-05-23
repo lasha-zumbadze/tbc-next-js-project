@@ -24,9 +24,9 @@ function ServiceItem({ icon, title, context, index }) {
         "md:col-span-2 lg:col-span-1 lg:w-full md:w-1/2 md:m-auto"
       }`}
     >
-      <Image src={icon} alt="icon" className="w-32 md:w-36 mb-6 md:mb-8" />
-      <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal">{title}</h3>
-      <p className="text-xl md:text-2xl lg:text-[1.7rem] text-[#888] font-normal lg:leading-snug mt-6 md:mt-8 px-4 sm:px-6 md:px-8">
+      <Image src={icon} alt="icon" className="w-36 mb-6 md:mb-8" />
+      <h3 className="text-4xl md:text-5xl font-normal">{title}</h3>
+      <p className="text-2xl md:text-[1.7rem] text-[#888] font-normal lg:leading-snug mt-6 md:mt-8 px-4 sm:px-6 md:px-8">
         {context}
       </p>
     </div>
