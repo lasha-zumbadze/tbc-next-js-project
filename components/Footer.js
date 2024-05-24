@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <Reservation />
-      <div className="py-24 px-40 lg:py-12 md:px-20 lg:px-60 bg-[#232323] grid md:grid-cols-2 lg:grid-cols-3 text-white items-center justify-center justify-items-center gap-y-12 md:gap-y-16 lg:gap-x-8">
+      <div className="py-24 px-32 lg:py-12 md:px-20 lg:px-28 bg-[#232323] grid md:grid-cols-2 lg:grid-cols-3 text-white items-center justify-center justify-items-center gap-y-16 md:gap-y-16 lg:gap-x-8">
         <div className="flex flex-col items-center md:items-start">
           <Logo titleFont={5} subtitleFont={2} letterSpace={1} />
           <div className="text-[1.4rem] text-[#b6b6b6] mt-8 md:mt-16">

@@ -13,7 +13,7 @@ function About() {
         <h3 className="text-6xl mt-4 font-normal">
           An Extraordinary Experience
         </h3>
-        <p className="text-[1.4rem] mt-10 text-[#777] leading-loose">
+        <p className="text-[1.5rem] mt-10 text-[#777] leading-loose">
           At VENUE, every dish tells a story. Our journey began with a simple
           idea: to create a place where food lovers could gather and enjoy the
           freshest ingredients, expertly prepared, and served with love.

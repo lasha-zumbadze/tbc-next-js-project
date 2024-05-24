@@ -23,7 +23,7 @@ function MenuItem({ img, title, price, ingredients, index }) {
           <h4 className="text-4xl font-medium">{title}</h4>
           <p className="text-4xl font-semibold text-[#c8a97e]">${price}</p>
         </div>
-        <p className="text-2xl">{ingredients.join(", ")}</p>
+        <p className="text-[1.6rem] text-gray-500">{ingredients.join(", ")}</p>
         <button className="mt-8 px-6 py-3 bg-[#c8a97e] text-white text-2xl font-semibold rounded transition-colors duration-300 hover:bg-white hover:text-[#c8a97e] hover:border-[#c8a97e] border border-[#c8a97e]">
           Order now
         </button>

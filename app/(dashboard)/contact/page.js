@@ -107,7 +107,7 @@ function Contact() {
               experience! Call us during business hours or use our{" "}
               <Link
                 href="#reservation"
-                className="text-[#c8a97e] border-b-[1px] border-[#c8a97e]"
+                className="text-[#c8a97e] border-b-[1px] border-[#c8a97e] hover:text-[#d79b47] transition-all hover:border-[#d79b47]"
               >
                 online reservation form
               </Link>{" "}

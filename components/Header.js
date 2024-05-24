@@ -65,8 +65,14 @@ function Header({ pageClass, title, subtitle, children }) {
           </Link>
         </ul>
 
-        <div className="border-solid border-white border-[2px] text-2xl font-bold px-4 py-6 lg:block hidden w-3/12">
-          <span>Reservation: </span>+995 123 456 789
+        <div className="border-solid border-white border-[2px] text-2xl font-bold px-4 py-6 lg:block hidden w-3/12 text-center">
+          {/* <span>Reservation: </span>+995 123 456 789 */}
+          <Link
+            href="#reservation"
+            className="text-white hover:text-[#c8a97e] transition-all"
+          >
+            Make a reservation
+          </Link>{" "}
         </div>
 
         <div className="lg:flex justify-around w-2/12 items-center hidden">
@@ -82,9 +88,11 @@ function Header({ pageClass, title, subtitle, children }) {
 
         <NavbarBtn />
       </nav>
-      <div className="-mt-8 w-full text-white text-5xl text-center absolute top-1/2 left-1/2 -translate-x-1/2 drop-shadow-3xl leading-none">
+      <div className="-mt-8 w-full text-white text-5xl text-center absolute lg:top-1/2 top-[38%] left-1/2 -translate-x-1/2 drop-shadow-3xl leading-none">
         <h1 className="font-alexBrush text-[#c8a97e] text-[5rem]">{title}</h1>
-        <p className="text-[7rem] italic">{subtitle}</p>
+        <p className="text-8xl mt-4 lg:mt-0 px-4 lg:px-0 leading-[1.2] lg:text-[7rem] italic">
+          {subtitle}
+        </p>
       </div>
     </header>
   );

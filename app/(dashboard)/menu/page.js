@@ -114,7 +114,7 @@ const menuOptionsData = [
 function Menu() {
   return (
     <>
-      <Header pageClass="menu" title="The Venue" subtitle="The Menu" />
+      <Header pageClass="menu" title="The Venue" subtitle="Menu" />
       <main>
         <section className="pt-24 pb-40 flex flex-col items-center gap-12 w-4/5 m-auto">
           <div className="flex flex-col items-center">

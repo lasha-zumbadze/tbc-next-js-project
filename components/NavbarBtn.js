@@ -6,6 +6,7 @@ import Link from "next/link";
 import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { logout } from "@/app/action";
 
 const linkArr = [
   "home",
@@ -54,7 +55,7 @@ function Navbar() {
               isActive ? "w-full" : "w-0"
             } overflow-hidden flex flex-col justify-center items-center text-5xl font-semibold pt-12`}
           >
-            <div className="flex gap-4 w-1/5 justify-around mb-20 items-center">
+            <div className="flex gap-4 w-2/5 justify-around mb-20 items-center">
               <ShoppingCartBtn />
               <ThemeSwitcher />
               <button
@@ -68,9 +69,7 @@ function Navbar() {
               <Link
                 key={i}
                 href={i === 0 ? "/" : `/${l}`}
-                onClick={() => {
-                  if (i === 0) setIsActive(false);
-                }}
+                onClick={() => setIsActive(false)}
                 className={`no-underline text-white cursor-pointer transition-all drop-shadow-3xl py-4 ${
                   hoveredIndex !== null && hoveredIndex !== i
                     ? styles.dimmed
@@ -82,7 +81,7 @@ function Navbar() {
                 {l.charAt(0).toUpperCase() + l.slice(1)}
               </Link>
             ))}
-            <div className="border-solid border-white border-[2px] text-2xl font-bold px-8 py-8 mt-20">
+            <div className="border-solid border-white border-[2px] text-2xl w-[28rem] text-center font-bold px-8 py-10 mt-20">
               <span>Reservation: </span>+995 123 456 789
             </div>
           </ul>

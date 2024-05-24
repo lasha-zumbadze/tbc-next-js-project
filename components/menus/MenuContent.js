@@ -9,7 +9,7 @@ import breakfastImg6 from "../../public/images/menu/chicken-parmesani.jpg";
 const menuData = [
   {
     img: breakfastImg1,
-    title: ["Chicken", '"Shkmeruli"'],
+    title: ['Chicken "Shkmeruli"'],
     price: 31,
     ingredients: ["Fried chick", "Garlic", "Sour cream"],
   },
