@@ -7,7 +7,5 @@ export async function getCartItems() {
 
   const { carts } = await res.json();
 
-  return carts && carts.rows[0].cartitems.length > 0
-    ? carts.rows[0].cartitems
-    : [];
+  return carts && carts.rows ? carts.rows[0].cartitems : [];
 }
