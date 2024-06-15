@@ -11,13 +11,15 @@ function CartItem({ id, quantity, storeItems }) {
   return (
     <>
       <div className="flex items-center shadow-md shadow-slate-400 rounded-md overflow-hidden">
-        <Image
-          src={item.imgurl}
-          alt={item.title}
-          style={{ objectFit: "cover", aspectRatio: "3/1.5" }}
-          width={300}
-          height={300}
-        />
+        <div className="w-[40rem] aspect-[3/1.7] relative">
+          <Image
+            src={item.imgurl}
+            alt={item.title}
+            fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
         <div className="w-full flex items-center justify-between px-5">
           <div className="flex flex-col gap-3">
             <div className="text-4xl flex gap-3 items-center">

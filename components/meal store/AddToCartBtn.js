@@ -1,5 +1,6 @@
 "use client";
 
+import { addCartItems } from "@/app/actions/addCartItems";
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useRouter } from "next/navigation";

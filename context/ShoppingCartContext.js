@@ -1,12 +1,11 @@
 "use client";
 
-import useLocalStorage from "@/hooks/useLocalStorage";
+import { addCartItems } from "@/app/actions/addCartItems";
 import { createContext, useContext, useState } from "react";
 
 const ShoppingCartContext = createContext();
 
 export function ShoppingCartProvider({ children }) {
-  // const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
   const [cartItems, setCartItems] = useState([]);
 
   const cartQuantity = cartItems.reduce(
@@ -20,39 +19,35 @@ export function ShoppingCartProvider({ children }) {
 
   function increaseCartQuantity(id) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id) == null) {
-        return [...currItems, { id, quantity: 1 }];
-      } else {
-        return currItems.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
-          } else {
-            return item;
-          }
-        });
-      }
+      const updatedItems =
+        currItems.find((item) => item.id === id) == null
+          ? [...currItems, { id, quantity: 1 }]
+          : currItems.map((item) =>
+              item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+            );
+      addCartItems(updatedItems);
+      return updatedItems;
     });
   }
 
   function decreaseCartQuantity(id) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id)?.quantity === 1) {
-        return currItems.filter((item) => item.id !== id);
-      } else {
-        return currItems.map((item) => {
-          if (item.id === id) {
-            return { ...item, quantity: item.quantity - 1 };
-          } else {
-            return item;
-          }
-        });
-      }
+      const updatedItems =
+        currItems.find((item) => item.id === id)?.quantity === 1
+          ? currItems.filter((item) => item.id !== id)
+          : currItems.map((item) =>
+              item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+            );
+      addCartItems(updatedItems);
+      return updatedItems;
     });
   }
 
   function removeFromCart(id) {
     setCartItems((currItems) => {
-      return currItems.filter((item) => item.id !== id);
+      const updatedItems = currItems.filter((item) => item.id !== id);
+      addCartItems(updatedItems);
+      return updatedItems;
     });
   }
 
