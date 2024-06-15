@@ -1,5 +1,4 @@
 import { BASE_URL } from "@/api";
-import { revalidatePath } from "next/cache";
 
 export async function getCartItems() {
   const res = await fetch(BASE_URL + "/api/get-cart-items", {
@@ -8,6 +7,7 @@ export async function getCartItems() {
 
   const { carts } = await res.json();
 
-  revalidatePath("/");
-  return carts.rows[0].cartitems;
+  return carts && carts.rows[0].cartitems.length > 0
+    ? carts.rows[0].cartitems
+    : [];
 }

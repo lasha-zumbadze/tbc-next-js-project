@@ -8,7 +8,6 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 const page = withPageAuthRequired(
   async function ShoppingItemsPage() {
     const storeItems = await getDishes();
-    // const storeItems = await getCartItems();
 
     return (
       <>

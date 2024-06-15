@@ -15,7 +15,7 @@ export const GET = async () => {
 
   try {
     await sql`
-  INSERT INTO users (user_id, name, email)
+  INSERT INTO users1 (user_id, name, email)
   VALUES (${user?.sub}, ${user?.name}, ${user?.email});
 `;
   } catch (error) {

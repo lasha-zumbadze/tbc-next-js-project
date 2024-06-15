@@ -1,12 +1,22 @@
 "use client";
 
 import { addCartItems } from "@/app/actions/addCartItems";
-import { createContext, useContext, useState } from "react";
+import { getCartItems } from "@/app/actions/getCartItems";
+import { getSession } from "@auth0/nextjs-auth0";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const ShoppingCartContext = createContext();
 
 export function ShoppingCartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    async function initializeCart() {
+      const items = await getCartItems();
+      setCartItems(items);
+    }
+    initializeCart();
+  }, []);
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,

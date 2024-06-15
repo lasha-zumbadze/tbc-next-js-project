@@ -4,15 +4,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { deleteDish } from "@/app/actions/deleteDish";
+import { useShoppingCart } from "@/context/ShoppingCartContext";
 
 const DeleteDish = ({ id }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { removeFromCart } = useShoppingCart();
 
   const modalRef = useRef(null);
   const router = useRouter();
 
   const openModal = () => {
     setIsModalOpen(true);
+    removeFromCart(id);
   };
 
   const closeModal = () => {
