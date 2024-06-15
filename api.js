@@ -1,3 +1,5 @@
+import { list } from "@vercel/blob";
+
 export const BASE_URL = "http://localhost:3000";
 
 export async function getUsers() {
@@ -7,14 +9,9 @@ export async function getUsers() {
   return users.rows;
 }
 
-export async function getProducts() {
-  const res = await fetch("https://dummyjson.com/products");
-  const data = await res.json();
-  return data.products;
-}
+// ******************************
 
-export async function getBlogs() {
-  const res = await fetch("https://dummyjson.com/posts");
-  const data = await res.json();
-  return data.posts;
+export async function getImagesBlobs() {
+  const response = await list();
+  return response.blobs;
 }

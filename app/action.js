@@ -1,9 +1,10 @@
 "use server";
 
-import { BASE_URL } from "@/api";
+import { BASE_URL, getImagesBlobs } from "@/api";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { put } from "@vercel/blob";
 
 // export async function login(username, password) {
 //   const res = await fetch("https://dummyjson.com/auth/login", {
@@ -103,3 +104,67 @@ export async function updateUser(id, name, email, age) {
   revalidatePath("/admin");
   redirect("/admin");
 }
+
+// *********************************
+
+// UPLOAD ACTIONS
+// export async function uploadBlogImage(formData) {
+//   const imageFile = formData.get("image");
+//   const folderPath = "blogs";
+//   const filePath = `${folderPath}/${imageFile.name}`;
+//   const blob = await put(filePath, imageFile, {
+//     access: "public",
+//   });
+//   revalidatePath("/upload");
+//   return blob;
+// }
+
+// export async function uploadMealImage(formData) {
+//   const imageFile = formData.get("image");
+//   const folderPath = "meals";
+//   const filePath = `${folderPath}/${imageFile.name}`;
+//   const blob = await put(filePath, imageFile, {
+//     access: "public",
+//   });
+
+//   revalidatePath("/admin/add-meal");
+//   return blob;
+// }
+
+// export async function uploadUserImage(formData) {
+//   const imageFile = formData.get("image");
+//   const folderPath = "users";
+//   const filePath = `${folderPath}/${imageFile.name}`;
+//   const blob = await put(filePath, imageFile, {
+//     access: "public",
+//   });
+//   revalidatePath("/upload");
+//   return blob;
+// }
+
+// *************************
+
+// export async function createMeal(formData) {
+//   const title = formData.get("title");
+//   const price = formData.get("price");
+
+//   const imgBlob = await getImagesBlobs();
+//   const img = imgBlob.filter((blob) => blob.pathname.includes("meals"));
+
+//   console.log(img);
+//   const imgUrl = img[1].url;
+
+//   const userData = {
+//     title: title,
+//     price: price,
+//     imgUrl: imgUrl,
+//   };
+
+//   await fetch(`${BASE_URL}/api/create-meal`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(userData),
+//   });
+// }

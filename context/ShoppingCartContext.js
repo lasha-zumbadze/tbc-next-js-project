@@ -1,12 +1,13 @@
 "use client";
 
 import useLocalStorage from "@/hooks/useLocalStorage";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ShoppingCartContext = createContext();
 
 export function ShoppingCartProvider({ children }) {
-  const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
+  // const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
+  const [cartItems, setCartItems] = useState([]);
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,

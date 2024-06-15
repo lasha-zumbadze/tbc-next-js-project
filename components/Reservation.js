@@ -1,8 +1,12 @@
 "use client";
 
+import { useUser } from "@auth0/nextjs-auth0/client";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 function Reservation() {
+  const { user } = useUser();
+  const router = useRouter();
   const dateInputRef = useRef(null);
 
   const handleDateInputClick = () => {
@@ -30,7 +34,7 @@ function Reservation() {
           className="w-[30rem] md:w-[25rem] h-20 px-8 border-none outline outline-[3px] outline-[#c8a97e] bg-[#c2a49500] text-white text-3xl leading-none font-semibold custom-date-picker cursor-pointer"
         />
 
-        <select className="w-[30rem] md:w-[22rem] h-20 px-8 border-none outline outline-[3px] outline-[#c8a97e] bg-[#c2a49500] text-white text-3xl leading-none font-semibold cursor-pointer">
+        <select className="w-[30rem] md:w-[25rem] h-20 px-8 border-none outline outline-[3px] outline-[#c8a97e] bg-[#c2a49500] text-white text-3xl leading-none font-semibold cursor-pointer">
           <option className="text-[#555]">Time</option>
           <option className="text-[#555]">10:00 AM</option>
           <option className="text-[#555]">11:00 AM</option>
@@ -46,7 +50,7 @@ function Reservation() {
           <option className="text-[#555]">09:00 PM</option>
           <option className="text-[#555]">10:00 PM</option>
         </select>
-        <select className="w-[30rem] md:w-[22rem] h-20 px-8 border-none outline outline-[3px] outline-[#c8a97e] bg-[#c2a49500] text-white text-3xl leading-none font-semibold cursor-pointer">
+        <select className="w-[30rem] md:w-[25rem] h-20 px-8 border-none outline outline-[3px] outline-[#c8a97e] bg-[#c2a49500] text-white text-3xl leading-none font-semibold cursor-pointer">
           <option className="text-[#555]">Person</option>
           <option className="text-[#555]">1</option>
           <option className="text-[#555]">2</option>
@@ -54,7 +58,12 @@ function Reservation() {
           <option className="text-[#555]">4+</option>
         </select>
       </div>
-      <button className="w-[30rem] md:w-[25rem] border-none bg-[#c8a97e] px-6 py-6 text-white text-[2rem] cursor-pointer transition-all hover:outline hover:outline-[3px] hover:outline-[#c8a97e] hover:bg-[#c2a49500]">
+      <button
+        onClick={() => {
+          if (!user) return router.push("/api/auth/login");
+        }}
+        className="w-[30rem] md:w-[25rem] border-none bg-[#c8a97e] px-8 py-5 text-white text-[2rem] cursor-pointer transition-all outline outline-[3px] outline-[#c8a97e] hover:bg-[#c2a49500]"
+      >
         Make a Reservation
       </button>
     </section>

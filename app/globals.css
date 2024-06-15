@@ -61,3 +61,37 @@ body {
   margin-bottom: 5rem;
   z-index: 1;
 }
+
+/* *************** */
+
+/* global.css or a CSS module */
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.shadow-2xl {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+
+/* .grid img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+} */
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}

@@ -1,6 +1,6 @@
 function Search({ search, setSearch }) {
   return (
-    <div className="flex justify-center items-center gap-4 mt-40">
+    <div className="flex justify-center items-center gap-4">
       <input
         type="text"
         placeholder="Search blog by title"

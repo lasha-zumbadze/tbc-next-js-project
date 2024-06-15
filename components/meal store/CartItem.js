@@ -12,7 +12,7 @@ function CartItem({ id, quantity, storeItems }) {
     <>
       <div className="flex items-center shadow-md shadow-slate-400 rounded-md overflow-hidden">
         <Image
-          src={item.images[0]}
+          src={item.imgurl}
           alt={item.title}
           style={{ objectFit: "cover", aspectRatio: "3/1.5" }}
           width={300}

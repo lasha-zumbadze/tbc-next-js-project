@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Alex_Brush, PT_Sans } from "next/font/google";
 import { Providers } from "./providers";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
+import logo from "../public/LOGO.png";
 
 const pt_sans = PT_Sans({
   subsets: ["latin"],
@@ -22,9 +24,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${pt_sans.variable} ${alex_brush.variable}`}>
-        <Providers>{children}</Providers>
-      </body>
+      <UserProvider>
+        <body className={`${pt_sans.variable} ${alex_brush.variable}`}>
+          <Providers>{children}</Providers>
+        </body>
+      </UserProvider>
     </html>
   );
 }

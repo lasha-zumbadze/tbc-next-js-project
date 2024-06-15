@@ -7,7 +7,7 @@ function ShoppingCartBtn() {
   const { cartQuantity } = useShoppingCart();
 
   return (
-    <Link href="/meals/shopping" className="relative">
+    <Link href="/shopping" className="relative">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512"

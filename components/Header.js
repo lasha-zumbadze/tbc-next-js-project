@@ -7,8 +7,12 @@ import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
 import NavbarBtn from "./NavbarBtn";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import UserIcon from "./UserIcon";
 
 function Header({ pageClass, title, subtitle, children }) {
+  const { user } = useUser();
+
   return (
     <header
       className={`bg-cover bg-center bg-no-repeat relative w-full sti ${pageClass}`}
@@ -28,9 +32,9 @@ function Header({ pageClass, title, subtitle, children }) {
           {/* <li>About us</li> */}
           <Link
             className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
-            href="/meals"
+            href="/dishes"
           >
-            Meals
+            Dishes
           </Link>
           {/* <li>Delivery</li> */}
           <Link
@@ -51,12 +55,12 @@ function Header({ pageClass, title, subtitle, children }) {
           >
             Contant
           </Link>
-          <Link
+          {/* <Link
             className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
             href="/profile"
           >
             Profile
-          </Link>
+          </Link> */}
           <Link
             className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] hover:drop-shadow-3xl"
             href="/admin"
@@ -78,12 +82,22 @@ function Header({ pageClass, title, subtitle, children }) {
         <div className="lg:flex justify-around w-2/12 items-center hidden">
           <ShoppingCartBtn />
           <ThemeSwitcher />
-          <button
+          {user ? (
+            <UserIcon user={user} />
+          ) : (
+            // <a href="/api/auth/logout" className="text-white text-3xl">
+            //   Logout
+            // </a>
+            <a className="text-white text-3xl" href="/api/auth/login">
+              Login
+            </a>
+          )}
+          {/* <button
             onClick={() => logout()}
             className="transition-all font-bold text-4xl hover:text-[#c8a97e] hover:drop-shadow-3xl"
           >
             <RiLogoutCircleRLine />
-          </button>
+          </button> */}
         </div>
 
         <NavbarBtn />
