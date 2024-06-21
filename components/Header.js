@@ -20,7 +20,7 @@ function Header({ title, subtitle, children }) {
     <header
       className={`bg-cover bg-center bg-no-repeat relative w-full bg-homepage h-screen mt-36`}
     >
-      <nav className="text-white py-[1.2rem] px-[10%] lg:px-64 bg-backgroundDarkblue fixed w-full top-0 z-10 flex items-center justify-between h-36">
+      <nav className="text-white py-[1.2rem] px-[10%] lg:px-64 bg-backgroundDarkblue fixed w-full top-0 z-50 flex items-center justify-between h-36">
         <Image src={icon} className="absolute top-6 left-8 hidden lg:block" />
         <ul className="hidden lg:flex list-none justify-around w-3/5 text-[1.8rem] font-semibold gap-16">
           <Link

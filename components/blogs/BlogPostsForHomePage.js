@@ -16,7 +16,7 @@ function BlogPostsForHomePage({ blogs }) {
           />
         ))}
       </div>
-      <Link href="/dishes" className="text-textGolden">
+      <Link href="/blog" className="text-textGolden">
         <HoverButton>Read Menu</HoverButton>
       </Link>
     </div>
