@@ -20,7 +20,7 @@ async function DishesPage() {
 
   return (
     <div className="dark:bg-gray-900">
-      <Header pageClass="menu" title="The Venue" subtitle="Meals" />
+      <Header pageClass="menu" title="KoKeshI" subtitle="Dish" />
       <div className="flex flex-col items-center mt-[6rem] mb-16 py-8">
         <h1 className="font-alexBrush text-7xl md:text-[5rem] text-[#a68250]">
           The Venue

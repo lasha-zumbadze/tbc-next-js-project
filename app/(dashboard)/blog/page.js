@@ -19,7 +19,7 @@ async function Blogs() {
 
   return (
     <>
-      <Header pageClass="blogs" title="The Venue" subtitle="Blogs" />
+      <Header pageClass="blogs" title="KoKeshI" subtitle="Blogs" />
       <main>
         <BlogPosts
           blogs={blogs}

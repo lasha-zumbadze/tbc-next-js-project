@@ -11,7 +11,7 @@ import ContactForm from "@/components/ContactForm";
 function Contact() {
   return (
     <>
-      <Header pageClass="contact" title="The Venue" subtitle="Contact" />
+      <Header pageClass="contact" title="KoKeshI" subtitle="Contact" />
       <main>
         <div className="grid lg:grid-cols-2 items-center w-4/5 m-auto gap-x-32 pt-24 pb-40 gap-y-4">
           <div className="flex flex-col gap-24 lg:gap-32">

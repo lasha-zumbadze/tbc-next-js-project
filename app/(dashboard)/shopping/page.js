@@ -11,7 +11,7 @@ const page = withPageAuthRequired(
 
     return (
       <>
-        <Header pageClass="menu" title="The Venue" subtitle="Meals" />
+        <Header pageClass="menu" title="KoKeshI" subtitle="Dish" />
         <ShoppingItems storeItems={storeItems} />;
         <Footer />
       </>

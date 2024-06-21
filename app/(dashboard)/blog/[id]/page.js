@@ -11,7 +11,7 @@ async function BlogDetailsPage({ params }) {
 
   return (
     <>
-      <Header pageClass="menu" title="The Venue" subtitle="Meals" />
+      <Header pageClass="menu" title="KoKeshI" subtitle="Blogs" />
 
       <div className="flex flex-col justify-center items-center bg-gray-100 relative">
         <div className="flex justify-center items-center gap-4 self-start text-4xl absolute top-24 left-24 border-b-2 border-[#c8a97e] pb-2">
