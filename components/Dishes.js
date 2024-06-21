@@ -14,6 +14,7 @@ import DishUpdateForm from "./update/DishUpdateForm";
 import { deleteDish } from "@/app/actions/deleteDish";
 import { useRouter } from "next/navigation";
 import DeleteDish from "./deletion/DeleteDish";
+import HalfRating from "./Raiting";
 
 function Dishes({ dishes, lastImage, imageNum }) {
   const [curPage, setCurrPage] = useState(1);
@@ -21,6 +22,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
   const [sortPriceDown, setSortPriceDown] = useState(false);
   const [category, setCategory] = useState("");
   const [sortMenu, setSortMenu] = useState(false);
+  const [rating, setRating] = useState(0);
   const imgInitialNum = useRef(imageNum);
   const router = useRouter();
 
@@ -165,6 +167,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
                     {dish.ingredients.join(", ")}
                   </p>
                 </div>
+                <HalfRating rating={rating} setRating={setRating} />
                 <AddToCartBtn id={dish.id} />
               </div>
             ))

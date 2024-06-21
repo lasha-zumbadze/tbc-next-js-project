@@ -7,11 +7,14 @@ import BlogUploadForm from "../uploads/BlogForm";
 import Blog from "./Blog";
 import Search from "./Search";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
-function BlogPosts({ blogs, lastImage }) {
+function BlogPosts({ blogs, lastImage, imageNum }) {
   const [search, setSearch] = useState("");
   const [curPage, setCurrPage] = useState(1);
+
+  const imgInitialNum = useRef(imageNum);
+
   const resultsPerPage = 8;
 
   const start = (curPage - 1) * resultsPerPage;
@@ -33,6 +36,10 @@ function BlogPosts({ blogs, lastImage }) {
                   imgUrl={blog.imgurl}
                   title={blog.title}
                   blog={blog.blog}
+                  id={blog.id}
+                  imgInitialNum={imgInitialNum}
+                  imageNum={imageNum}
+                  lastImage={lastImage}
                   key={blog.id}
                 />
               ))
@@ -44,15 +51,21 @@ function BlogPosts({ blogs, lastImage }) {
                   imgUrl={blog.imgurl}
                   title={blog.title}
                   blog={blog.blog}
+                  id={blog.id}
+                  imgInitialNum={imgInitialNum}
+                  imageNum={imageNum}
+                  lastImage={lastImage}
                   key={blog.id}
                 />
               ))}
       </div>
-      <Pagination
-        pageNum={pageNum}
-        setCurrPage={setCurrPage}
-        curPage={curPage}
-      />
+      {blogs.length > resultsPerPage && (
+        <Pagination
+          pageNum={pageNum}
+          setCurrPage={setCurrPage}
+          curPage={curPage}
+        />
+      )}
     </div>
   );
 }

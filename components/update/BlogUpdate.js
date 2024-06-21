@@ -2,15 +2,23 @@
 
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
-import { FormForImg } from "./FormForImg";
-import imgPlaceholder from "../../public/placeholder-image.png";
-import { useRouter } from "next/navigation";
-import { createBlog } from "@/app/actions/createBlog";
 
-const BlogUpdateForm = ({ imgUrl }) => {
-  const [title, setTitle] = useState("");
-  const [blog, setBlog] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(true);
+import { useRouter } from "next/navigation";
+import { FormForImg } from "../uploads/FormForImg";
+import { FiEdit } from "react-icons/fi";
+import { updateBlog } from "@/app/actions/updateBlog";
+
+const BlogUpdateForm = ({
+  blogTitle,
+  blogContent,
+  blogImg,
+  id,
+  imgInitialNum,
+  imageNum,
+}) => {
+  const [title, setTitle] = useState(blogTitle);
+  const [blog, setBlog] = useState(blogContent);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const modalRef = useRef(null);
   const router = useRouter();
@@ -18,11 +26,10 @@ const BlogUpdateForm = ({ imgUrl }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    createBlog(title, blog, imgUrl);
+    updateBlog(title, blog, blogImg, id);
 
-    setTitle("");
-    setBlog("");
     setIsModalOpen(false);
+    if (imgInitialNum.current < imageNum) imgInitialNum.current = imageNum;
 
     router.refresh();
   };
@@ -61,9 +68,9 @@ const BlogUpdateForm = ({ imgUrl }) => {
     <>
       <button
         onClick={openModal}
-        className="bg-[#c8a97e] text-white py-4 px-4 rounded-md hover:bg-[#a9845f] transition duration-300 text-3xl"
+        className="bg-[#c8a97e] text-white py-2 px-2 rounded-md hover:bg-[#a9845f] transition duration-300 text-4xl"
       >
-        Add new blog
+        <FiEdit />
       </button>
 
       {isModalOpen && (
@@ -80,7 +87,7 @@ const BlogUpdateForm = ({ imgUrl }) => {
             </button>
             <div className="grid grid-cols-2 justify-center items-center max-w-6xl gap-16">
               <h2 className="text-4xl font-bold mb-6 text-center text-[#c8a97e] col-span-2">
-                Add blog
+                Edit blog
               </h2>
               <div className="bg-white p-8 rounded-lg shadow-inner shadow-[#c8a97e]">
                 <div className="flex flex-col gap-8">
@@ -126,7 +133,7 @@ const BlogUpdateForm = ({ imgUrl }) => {
                         type="submit"
                         className="w-full bg-[#c8a97e] text-white py-2 px-4 rounded-md hover:bg-[#a9845f] transition duration-300 text-2xl"
                       >
-                        Add blog
+                        Edit blog
                       </button>
                     </div>
                   </form>
@@ -135,23 +142,13 @@ const BlogUpdateForm = ({ imgUrl }) => {
 
               <div className="p-4 bg-white flex flex-col border">
                 <div className="flex justify-center mb-8">
-                  {imgUrl ? (
-                    <Image
-                      src={imgUrl}
-                      alt="blog"
-                      width={200}
-                      height={200}
-                      className="w-full"
-                    />
-                  ) : (
-                    <Image
-                      src={imgPlaceholder}
-                      alt="meal"
-                      width={200}
-                      height={200}
-                      className="w-full"
-                    />
-                  )}
+                  <Image
+                    src={blogImg}
+                    alt="blog"
+                    width={200}
+                    height={200}
+                    className="w-full"
+                  />
                 </div>
                 <h2 className="text-4xl md:text-5xl border-b-[3px] border-solid border-[#c4ab9f] w-fit mt-4 mb-4 md:mb-8 pb-4 text-[#303030] break-words">
                   {title}

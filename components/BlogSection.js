@@ -1,12 +1,11 @@
 import { getBlogs } from "@/app/actions/getBlogs";
-import BlogPosts from "../../../components/blogs/BlogPosts";
-import Footer from "../../../components/Footer";
-import Header from "../../../components/Header";
+import Heading from "./Heading";
 import { list } from "@vercel/blob";
+import BlogPostsForHomePage from "./blogs/BlogPostsForHomePage";
 
-async function Blogs() {
+async function BlogSection() {
   const blogsData = await getBlogs();
-  const blogs = blogsData.sort((a, b) => a.id - b.id);
+  const blogs = blogsData.slice(0, 3);
 
   async function allImages() {
     const blobs = await list();
@@ -18,18 +17,19 @@ async function Blogs() {
   const lastImage = images.pop();
 
   return (
-    <>
-      <Header pageClass="blogs" title="The Venue" subtitle="Blogs" />
-      <main>
-        <BlogPosts
+    <div className="flex flex-col items-center py-32 bg-backgroundDarkblue">
+      <Heading gap={16} minHeight={16}>
+        <h1 className=" text-8xl md:text-9xl text-[#a68250]">THE BLOG</h1>
+      </Heading>
+      <div>
+        <BlogPostsForHomePage
           blogs={blogs}
           lastImage={lastImage}
           imageNum={images.length}
         />
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }
 
-export default Blogs;
+export default BlogSection;

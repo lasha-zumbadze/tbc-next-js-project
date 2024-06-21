@@ -1,95 +1,96 @@
-import MenuItem from "./MenuItem";
-import breakfastImg1 from "../../public/images/menu/chicken-shkmeruli.jpg";
-import breakfastImg2 from "../../public/images/menu/ostri.jpg";
-import breakfastImg3 from "../../public/images/menu/veal-stew.jpg";
-import breakfastImg4 from "../../public/images/menu/pork-barbecue.jpg";
-import breakfastImg5 from "../../public/images/menu/greek-salad.jpg";
-import breakfastImg6 from "../../public/images/menu/chicken-parmesani.jpg";
+import MenuOption from "./MenuOption";
+import Link from "next/link";
+import HoverButton from "../HoverButton";
 
-const menuData = [
+const menuOptionsData = [
   {
-    img: breakfastImg1,
-    title: ['Chicken "Shkmeruli"'],
-    price: 31,
-    ingredients: ["Fried chick", "Garlic", "Sour cream"],
-  },
-  {
-    img: breakfastImg2,
-    title: ["Ostri"],
-    price: 24,
-    ingredients: ["Beef", "Sauce", "Onion", "Red pepper"],
-  },
-  {
-    img: breakfastImg3,
-    title: ["Veal Stew"],
-    price: 35,
-    ingredients: [
-      "Veal",
-      "Tomato",
-      "Onion",
-      "Wine",
-      "Coriander",
-      "Pepper",
-      "Butter",
+    option: "ROLL",
+    meals: [
+      {
+        name: "Rainbow Roll",
+        price: 40,
+        components: ["Rice", "Nori", "Crab mix", "Avocado"],
+      },
+      {
+        name: "Unagi Roll",
+        price: 40,
+        components: ["Rice", "Nori", "Cream cheese", "Salmon"],
+      },
+      {
+        name: "Philadelphia Roll",
+        price: 35,
+        components: ["Rice", "Nori", "Cream cheese", "Avocado"],
+      },
+      {
+        name: "Dragon Roll",
+        price: 45,
+        components: ["Rice", "Nori", "Cream cheese", "Cucumber", "Eel"],
+      },
     ],
   },
   {
-    img: breakfastImg4,
-    title: ["Pork Barbecue"],
-    price: 20,
-    ingredients: ["Pork", "Salt", "Onion", "Somegranate"],
-  },
-  {
-    img: breakfastImg5,
-    title: ["Greek-salad"],
-    price: 14,
-    ingredients: [
-      "Cucumber",
-      "tomato",
-      "olive",
-      "green and red bell pepper",
-      "lemon",
-      "onion",
-      "feta",
-      "olive oil",
+    option: "MAKI",
+    meals: [
+      {
+        name: "Cucumber Maki",
+        price: 5,
+        components: ["Rice", "Nori", "Cucumber", "Sesame"],
+      },
+      {
+        name: "Avocado Maki",
+        price: 7,
+        components: ["Rice", "Nori", "Avocado"],
+      },
+      {
+        name: "Shrimp Maki",
+        price: 11,
+        components: ["Rice", "Nori", "Shrimp", "Oil mayo", "Wasabi"],
+      },
+      {
+        name: "Crab Maki",
+        price: 7,
+        components: ["Rice", "Nori", "Crab mix"],
+      },
     ],
   },
   {
-    img: breakfastImg6,
-    title: ["Chicken with parmesan"],
-    price: 12,
-    ingredients: [
-      "Boiled chicken fillet",
-      "mayonnaise",
-      "green bell pepper",
-      "parmesan",
+    option: "NIGIRI",
+    meals: [
+      {
+        name: "Salmon Nigiri",
+        price: 12,
+        components: ["Rice", "Salmon", "Caviar"],
+      },
+      {
+        name: "Hot Salmon Nigiri",
+        price: 10,
+        components: ["Rice", "Grilled salmon", "Unagi sauce"],
+      },
+      {
+        name: "Eel Nigiri",
+        price: 13,
+        components: ["Rice", "Eel", "Unagi sauce", "Sesame"],
+      },
+      {
+        name: "Shrimp Nigiri",
+        price: 12,
+        components: ["Rice", "Shrimp", "Hot mayo", "Tobiko", "Green onion"],
+      },
     ],
   },
 ];
 
 function Menu() {
   return (
-    <section className="flex flex-col items-center gap-24 md:pt-52 lg:pt-60 pt-40 pb-40">
-      <div className="md:mb-8">
-        <h2 className="font-alexBrush text-[#c8a97e] text-8xl md:text-[8rem] lg:text-[11rem] font-normal leading-[0] text-center">
-          Specialties
-        </h2>
-        <h3 className="text-6xl md:text-7xl lg:text-8xl text-center font-medium mt-1">
-          Our Menu
-        </h3>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 md:px-24 justify-items-center">
-        {menuData.map((menuItem, i) => (
-          <MenuItem
-            img={menuItem.img}
-            title={menuItem.title}
-            price={menuItem.price}
-            ingredients={menuItem.ingredients}
-            index={i}
-            key={i}
-          />
+    <section className="flex flex-col items-center gap-12 lg:gap-24 py-20 pb-32 bg-[#293441]">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1 mt-12 gap-x-12">
+        {menuOptionsData.map((menu, i) => (
+          <MenuOption option={menu.option} meals={menu.meals} key={i} />
         ))}
       </div>
+      <Link href="/dishes" className="text-textGolden">
+        <HoverButton>Read Menu</HoverButton>
+      </Link>
     </section>
   );
 }

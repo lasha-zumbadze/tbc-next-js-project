@@ -1,18 +1,38 @@
 import Image from "next/image";
+import BlogUpdateForm from "../update/BlogUpdate";
+import DeleteBlog from "../deletion/DeleteBlog";
+import Link from "next/link";
 
-function Blog({ imgUrl, title, blog }) {
+function Blog({ imgUrl, title, blog, id, imageNum, imgInitialNum, lastImage }) {
   return (
     <div>
-      <Image
-        src={imgUrl}
-        width={150}
-        height={150}
-        alt="blog"
-        className="w-full"
-      />
-      <h2 className="text-4xl md:text-5xl border-b-[3px] border-solid border-[#c4ab9f] w-fit mt-4 mb-4 md:mb-8 pb-4 text-[#303030] break-words">
-        {title}
-      </h2>
+      <div className="flex justify-between mb-4">
+        <BlogUpdateForm
+          blogTitle={title}
+          blogContent={blog}
+          blogImg={imageNum > imgInitialNum.current ? lastImage.url : imgUrl}
+          imgInitialNum={imgInitialNum}
+          imageNum={imageNum}
+          id={id}
+        />
+        <DeleteBlog id={id} />
+      </div>
+      <div className="w-full aspect-[3/2] relative">
+        <Image
+          src={imgUrl}
+          alt={title}
+          fill
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: "cover" }}
+          className="rounded-lg"
+        />
+      </div>
+
+      <Link className="w-fit" href={`/blog/${id}`}>
+        <h2 className="text-4xl md:text-5xl border-b-[3px] border-solid border-[#c4ab9f] w-fit mt-4 mb-4 md:mb-8 pb-4 text-[#303030] break-words">
+          {title}
+        </h2>
+      </Link>
       <p className="text-[1.6rem] leading-[1.8] text-[#777] line-clamp-2 break-words">
         {blog}
       </p>

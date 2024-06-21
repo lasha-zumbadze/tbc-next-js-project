@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        backgroundDarkblue: "#0C1416",
+        textGolden: "#C9AB82",
+      },
       boxShadow: {
         "3xl": "0 0 50px 1px #0000004f",
         "4xl": "0 10px 50px #00000024",
@@ -16,6 +20,7 @@ module.exports = {
         "7xl": "0 0 50px 2px #c4ab9f49",
       },
       backgroundImage: {
+        homepage: "url('../public/homepage.jpg')",
         reservation: "url('../public/images/reservations.png')",
         interier1: "url('../public/images/interiers/interier-1.png')",
         interier2: "url('../public/images/interiers/interier-2.png')",

@@ -79,7 +79,7 @@ const serviceData = [
 
 function Services() {
   return (
-    <section className="py-32 px-24 sm:py-20 md:px-0 md:py-20 flex flex-col items-center gap-20 bg-[#6c757d0d] mt-16 md:mt-24">
+    <section className="">
       <div>
         <h2 className="font-alexBrush text-[#c8a97e] text-8xl md:text-9xl lg:text-[11rem] leading-[0] text-center font-normal">
           Services

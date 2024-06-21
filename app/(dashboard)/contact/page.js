@@ -113,7 +113,7 @@ function Contact() {
               </Link>{" "}
               to secure your table.
             </p>
-            <div className="m-auto lg:m-0">
+            <div className="lg:m-0 w-fit">
               <Logo titleFont={5} subtitleFont={2} letterSpace={1} />
             </div>
           </div>
@@ -132,22 +132,22 @@ function Contact() {
             </p>
             <div className="flex justify-around pt-8">
               <Image
-                className="w-12 cursor-pointer"
+                className="w-12 cursor-pointer transition-all hover:scale-125"
                 src={facebookIcon}
                 alt="facebook"
               />
               <Image
-                className="w-12 cursor-pointer"
+                className="w-12 cursor-pointer transition-all hover:scale-125"
                 src={instagramIcon}
                 alt="instagram"
               />
               <Image
-                className="w-12 cursor-pointer"
+                className="w-12 cursor-pointer transition-all hover:scale-125"
                 src={twitterIcon}
                 alt="twitter"
               />
               <Image
-                className="w-12 cursor-pointer"
+                className="w-12 cursor-pointer transition-all hover:scale-125"
                 src={linkedinIcon}
                 alt="linkedin"
               />

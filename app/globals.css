@@ -18,11 +18,6 @@ body {
   background-color: #c2a4957b;
 }
 
-.home {
-  background: url("../public/images/home.jpg.webp");
-  height: 100vh;
-}
-
 .menu {
   background: url("../public/images/menu.jpg.webp");
   height: 75vh;

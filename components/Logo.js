@@ -1,18 +1,11 @@
-function Logo({ titleFont, subtitleFont, letterSpace }) {
+import Image from "next/image";
+import logo from "../public/logo.jpg";
+
+function Logo() {
   return (
-    <div className="lg:mr-20 leading-tight cursor-pointer -tracking-[2px]">
-      <p className="text-[3rem]" style={{ fontSize: `${titleFont}rem` }}>
-        The Venue
-      </p>
-      <p
-        className="text-[1.2rem] tracking-[0.5rem] pl-2 font-normal"
-        style={{
-          fontSize: `${subtitleFont}rem`,
-          letterSpacing: `${letterSpace}rem`,
-        }}
-      >
-        RESTAURANT
-      </p>
+    <div className="text-4xl text-textGolden">
+      KoKeshI
+      {/* <Image src={logo} width={150} height={150} /> */}
     </div>
   );
 }
