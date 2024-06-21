@@ -88,8 +88,11 @@ function Menu() {
           <MenuOption option={menu.option} meals={menu.meals} key={i} />
         ))}
       </div>
-      <Link href="/dishes" className="text-textGolden">
-        <HoverButton>Read Menu</HoverButton>
+      <Link
+        href="/dishes"
+        className="text-textGolden hover:text-white transition-all"
+      >
+        <HoverButton width={60}>Read Menu</HoverButton>
       </Link>
     </section>
   );

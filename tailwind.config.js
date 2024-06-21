@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         homepage: "url('../public/homepage.jpg')",
         reservation: "url('../public/images/reservations.png')",
+        contactForm: "url('../public/inner4.jpg')",
         interier1: "url('../public/images/interiers/interier-1.png')",
         interier2: "url('../public/images/interiers/interier-2.png')",
         interier3: "url('../public/images/interiers/interier-3.png')",

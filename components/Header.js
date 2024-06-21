@@ -12,6 +12,7 @@ import UserIcon from "./UserIcon";
 import Image from "next/image";
 import icon from "../public/fig.svg";
 import listIcon from "../public/li.svg";
+import HoverButton from "./HoverButton";
 
 function Header({ title, subtitle, children }) {
   const { user } = useUser();
@@ -97,15 +98,15 @@ function Header({ title, subtitle, children }) {
           {subtitle}
         </p>
         <div className="flex gap-12 w-fit m-auto mt-48">
-          <div className="border-solid border-textGolden border-[1px] text-3xl lg:block text-center px-8 py-6 relative w-60 h-[5.5rem]">
-            <div className="border-solid border-textGolden border-[1px] text-3xl lg:block text-center absolute w-60 h-[5.5rem] top-2 left-2 hover:top-0 hover:left-0 transition-all hover:border-white"></div>
-            <Link href="#reservation" className="text-textGolden">
-              Online Order
-            </Link>{" "}
-          </div>
+          <Link
+            href="#reservation"
+            className="text-textGolden hover:text-white transition-all"
+          >
+            <HoverButton width={60}>Online Order</HoverButton>
+          </Link>
 
           <div className="border-solid border-textGolden border-[1px] text-3xl text-center px-8 py-6 relative w-96 h-[5.5rem] text-textGolden">
-            <div className="border-solid border-textGolden border-[1px] text-3xl lg:block text-center absolute w-96 h-[5.5rem] top-2 left-2 hover:top-0 hover:left-0 transition-all hover:border-white"></div>
+            <div className="border-solid border-textGolden border-[1px] text-3xl lg:block text-center absolute w-96 h-[5.5rem] top-2 left-2"></div>
             <span>Call </span>+995 123 456 789
           </div>
         </div>

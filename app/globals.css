@@ -18,21 +18,6 @@ body {
   background-color: #c2a4957b;
 }
 
-.menu {
-  background: url("../public/images/menu.jpg.webp");
-  height: 75vh;
-}
-
-.blogs {
-  background: url("../public/images/blog.jpg.webp");
-  height: 75vh;
-}
-
-.contact {
-  background: url("../public/images/contact.jpg.webp");
-  height: 75vh;
-}
-
 .custom-date-picker {
   position: relative;
   background: url("../public/images/icons8-calendar-24.png") no-repeat right 3px
@@ -48,18 +33,7 @@ body {
   display: none;
 }
 
-.leaflet-container {
-  height: 50vh;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: -5rem;
-  margin-bottom: 5rem;
-  z-index: 1;
-}
-
 /* *************** */
-
-/* global.css or a CSS module */
 
 .bg-gray-100 {
   background-color: #f7fafc;
@@ -73,11 +47,6 @@ body {
 .rounded-lg {
   border-radius: 0.75rem;
 }
-
-/* .grid img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-} */
 
 .text-gray-800 {
   color: #2d3748;

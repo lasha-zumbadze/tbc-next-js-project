@@ -17,7 +17,7 @@ function Home() {
       <main>
         <About />
         <Menu />
-        {/* <Visit /> */}
+        <Visit />
         {/* <Services /> */}
         <BlogSection />
       </main>
