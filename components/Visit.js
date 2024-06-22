@@ -5,7 +5,7 @@ import decor from "../public/decorverylong.svg";
 
 function Visit() {
   return (
-    <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-items-center items-center relative lg:h-[70vh] h-[80vh] bg-backgroundDarkblue">
+    <div className="grid md:grid-cols-2 justify-items-center items-center relative lg:h-[70vh] h-[80vh] bg-backgroundDarkblue">
       <div className="flex flex-col gap-12 justify-center items-center py-28">
         <Heading gap={16} minHeight={16}>
           <h1 className="text-8xl font-bold text-textGolden">VISIT US</h1>
@@ -28,11 +28,12 @@ function Visit() {
         </div>
       </div>
       <div className="absolute -translate-x-1/2 hidden lg:block">
-        <Image src={decor} />
+        <Image src={decor} alt="docer" />
       </div>
       <div className="aspect-[3/2] relative w-full">
         <Image
           src={visitImage}
+          alt="visit"
           fill
           sizes="(max-width: 600px) 90vw, (max-width: 1200px) 40vw, 33vw"
           style={{ objectFit: "cover" }}

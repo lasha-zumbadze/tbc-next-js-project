@@ -27,7 +27,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="bg-contactForm bg-cover bg-center grid md:grid-cols-2 justify-items-center py-28">
+    <div className="bg-contactForm bg-cover bg-center grid md: gap-y-32 lg:grid-cols-2 justify-items-center md:pb-40 py-28">
       <form className="grid justify-items-center" onSubmit={handleSubmit}>
         <div className="relative -top-10 w-4/5">
           <Heading minHeight={8} gap={8}>
@@ -78,8 +78,9 @@ function ContactForm() {
           className="absolute top-28 -left-36"
           width={420}
           height={420}
+          alt="contact"
         />
-        <Image src={contactFormImg1} width={420} height={420} />
+        <Image src={contactFormImg1} width={420} height={420} alt="contact" />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ function Decor() {
           x2="21.9393"
           y2="20.5425"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -22,7 +22,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 21 1)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="1.35355"
@@ -30,7 +30,7 @@ function Decor() {
           x2="20.8599"
           y2="39.4632"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -38,7 +38,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 21.6897 20.3104)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="21.3536"
@@ -46,7 +46,7 @@ function Decor() {
           x2="40.8599"
           y2="20.1528"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -54,7 +54,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 41 1)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="21.3536"
@@ -62,7 +62,7 @@ function Decor() {
           x2="40.8599"
           y2="39.4632"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -70,7 +70,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 41 20.3104)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="41.3536"
@@ -78,7 +78,7 @@ function Decor() {
           x2="60.8599"
           y2="20.1528"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -86,7 +86,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 61 1)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="61.3536"
@@ -94,7 +94,7 @@ function Decor() {
           x2="80.8599"
           y2="20.1528"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -102,7 +102,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 81 1)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="81.3536"
@@ -110,7 +110,7 @@ function Decor() {
           x2="100.86"
           y2="20.1528"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -118,7 +118,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 90.6552 10.6552)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="41.3536"
@@ -126,7 +126,7 @@ function Decor() {
           x2="60.8599"
           y2="39.4632"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -134,7 +134,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 61 20.3104)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="61.3536"
@@ -142,7 +142,7 @@ function Decor() {
           x2="80.8599"
           y2="39.4632"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -150,7 +150,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 81 20.3104)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           x1="80.6639"
@@ -158,7 +158,7 @@ function Decor() {
           x2="90.9047"
           y2="30.1977"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <line
           y1="-0.5"
@@ -166,7 +166,7 @@ function Decor() {
           y2="-0.5"
           transform="matrix(-0.707107 0.707107 0.707107 0.707107 101 20.3104)"
           stroke="#C9AB82"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
       </svg>
     </div>

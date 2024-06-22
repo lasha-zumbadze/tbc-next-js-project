@@ -85,7 +85,12 @@ function Menu() {
     <section className="flex flex-col items-center gap-12 lg:gap-24 py-20 pb-32 bg-[#293441]">
       <div className="grid lg:grid-cols-3 sm:grid-cols-1 mt-12 gap-x-12">
         {menuOptionsData.map((menu, i) => (
-          <MenuOption option={menu.option} meals={menu.meals} key={i} />
+          <MenuOption
+            option={menu.option}
+            meals={menu.meals}
+            key={i}
+            menuPage={false}
+          />
         ))}
       </div>
       <Link

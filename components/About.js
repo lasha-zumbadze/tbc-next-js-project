@@ -6,7 +6,7 @@ import Heading from "./Heading";
 
 function About() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center dark:bg-backgroundDarkblue">
       <div className="flex flex-col items-center mt-[6rem] pt-20">
         <Heading gap={16} minHeight={16}>
           <h1 className="font-alexBrush text-7xl md:text-9xl text-[#a68250]">

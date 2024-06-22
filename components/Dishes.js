@@ -58,7 +58,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
   else dishesData = dishes;
 
   return (
-    <div className="p-16 pb-44 bg-gray-50 min-h-screen flex flex-col gap-16">
+    <div className="p-16 pb-44 bg-gray-50 min-h-screen flex flex-col gap-16 dark:bg-[#293441]">
       <div className="flex justify-between items-center">
         <div>
           <div
@@ -98,7 +98,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
               <li className="flex gap-8 justify-between items-center">
                 Category:
                 <select
-                  className="border-solid border-2 border-[#c8a97e]"
+                  className="border-solid border-2 border-[#c8a97e] dark:bg-white"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                 >
@@ -115,12 +115,12 @@ function Dishes({ dishes, lastImage, imageNum }) {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6 gap-14">
+        <div className="grid grid-cols-1 px-16 sm:px-48 md:px-0 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-14">
           {dishesData
             .map((dish) => (
               <div
                 key={dish.id}
-                className="p-4 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+                className="p-4 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col dark:bg-gray-100"
               >
                 <div className="flex justify-between mb-4">
                   <DishUpdateForm
@@ -128,6 +128,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
                     dishPrice={dish.price}
                     dishDescription={dish.description}
                     dishIngredients={dish.ingredients}
+                    dishCategory={dish.category}
                     dishImg={
                       imageNum > imgInitialNum.current
                         ? lastImage.url

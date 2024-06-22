@@ -78,7 +78,7 @@ const BlogUploadForm = ({ imgUrl }) => {
             >
               ❌
             </button>
-            <div className="grid grid-cols-2 justify-center items-center max-w-6xl gap-16">
+            <div className="grid md:grid-cols-2 justify-center items-center max-w-6xl md:gap-16 gap-y-8">
               <h2 className="text-4xl font-bold mb-6 text-center text-[#c8a97e] col-span-2">
                 Add blog
               </h2>
@@ -100,7 +100,7 @@ const BlogUploadForm = ({ imgUrl }) => {
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e] dark:bg-white dark:text-black"
                       />
                     </div>
 
@@ -118,7 +118,7 @@ const BlogUploadForm = ({ imgUrl }) => {
                         onChange={(e) => setBlog(e.target.value)}
                         rows="5"
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e] dark:bg-white dark:text-black"
                       ></textarea>
                     </div>
                     <div>
@@ -133,7 +133,7 @@ const BlogUploadForm = ({ imgUrl }) => {
                 </div>
               </div>
 
-              <div className="p-4 bg-white flex flex-col border">
+              <div className="p-4 bg-white md:flex flex-col border hidden">
                 <div className="flex justify-center mb-8">
                   {imgUrl ? (
                     <Image

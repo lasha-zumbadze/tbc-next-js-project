@@ -22,7 +22,11 @@ function Header({ title, subtitle, children }) {
       className={`bg-cover bg-center bg-no-repeat relative w-full bg-homepage h-screen mt-36`}
     >
       <nav className="text-white py-[1.2rem] px-[10%] lg:px-64 bg-backgroundDarkblue fixed w-full top-0 z-50 flex items-center justify-between h-36">
-        <Image src={icon} className="absolute top-6 left-8 hidden lg:block" />
+        <Image
+          src={icon}
+          className="absolute top-6 left-8 hidden lg:block"
+          alt="icon"
+        />
         <ul className="hidden lg:flex list-none justify-around w-3/5 text-[1.8rem] font-semibold gap-16">
           <Link
             className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
@@ -86,7 +90,11 @@ function Header({ title, subtitle, children }) {
             </a>
           )}
         </div>
-        <Image src={icon} className="absolute top-6 right-8 hidden lg:block" />
+        <Image
+          src={icon}
+          className="absolute top-6 right-8 hidden lg:block"
+          alt="icon"
+        />
         <div className="lg:hidden">
           <Logo />
         </div>
@@ -102,13 +110,16 @@ function Header({ title, subtitle, children }) {
             href="#reservation"
             className="text-textGolden hover:text-white transition-all"
           >
-            <HoverButton width={60}>Online Order</HoverButton>
+            <HoverButton width="60">Online Order</HoverButton>
           </Link>
-
-          <div className="border-solid border-textGolden border-[1px] text-3xl text-center px-8 py-6 relative w-96 h-[5.5rem] text-textGolden">
-            <div className="border-solid border-textGolden border-[1px] text-3xl lg:block text-center absolute w-96 h-[5.5rem] top-2 left-2"></div>
-            <span>Call </span>+995 123 456 789
-          </div>
+          <Link
+            href={`tel:+995123456789`}
+            className="text-textGolden hover:text-white transition-all"
+          >
+            <HoverButton width="96">
+              <span>Call </span>+995 123 456 789
+            </HoverButton>
+          </Link>
         </div>
       </div>
     </header>

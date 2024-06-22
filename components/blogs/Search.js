@@ -6,7 +6,7 @@ function Search({ search, setSearch }) {
         placeholder="Search blog by title"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="px-4 py-4 text-[1.6rem] w-[30rem] md:w-[40rem] rounded-md shadow-inner shadow-[#ad8f82] focus:outline-none pl-6 text-[#ad8f82] placeholder:text-[#ad8f82]"
+        className="px-4 py-4 text-[1.6rem] w-[30rem] md:w-[40rem] rounded-md shadow-inner shadow-[#ad8f82] focus:outline-none pl-6 text-[#ad8f82] placeholder:text-[#ad8f82] dark:bg-white"
       />
     </div>
   );

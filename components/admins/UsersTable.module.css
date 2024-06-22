@@ -1,4 +1,4 @@
-.usersContainer {
+/* .usersContainer {
   margin: 0 auto;
   width: 60%;
   padding: 8rem 0;
@@ -76,15 +76,9 @@
   color: #c8a97e;
 }
 
-/* .deleteUser {
-  color: rgb(191, 49, 49);
-  font-size: 2.5rem;
-  margin-left: 3rem;
-} */
-
 .deleteBtn {
   color: rgb(191, 49, 49);
   font-size: 2.5rem;
   margin-left: 3rem;
   font-weight: bold;
-}
+} */

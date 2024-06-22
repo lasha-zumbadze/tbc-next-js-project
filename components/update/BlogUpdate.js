@@ -85,7 +85,7 @@ const BlogUpdateForm = ({
             >
               ❌
             </button>
-            <div className="grid grid-cols-2 justify-center items-center max-w-6xl gap-16">
+            <div className="grid md:grid-cols-2 justify-center items-center max-w-6xl md:gap-16 gap-y-8">
               <h2 className="text-4xl font-bold mb-6 text-center text-[#c8a97e] col-span-2">
                 Edit blog
               </h2>
@@ -107,7 +107,7 @@ const BlogUpdateForm = ({
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e] dark:bg-white dark:text-black"
                       />
                     </div>
 
@@ -125,7 +125,7 @@ const BlogUpdateForm = ({
                         onChange={(e) => setBlog(e.target.value)}
                         rows="5"
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:ring-[#c8a97e] focus:border-[#c8a97e] dark:bg-white dark:text-black"
                       ></textarea>
                     </div>
                     <div>
@@ -140,7 +140,7 @@ const BlogUpdateForm = ({
                 </div>
               </div>
 
-              <div className="p-4 bg-white flex flex-col border">
+              <div className="p-4 bg-white md:flex flex-col border hidden">
                 <div className="flex justify-center mb-8">
                   <Image
                     src={blogImg}

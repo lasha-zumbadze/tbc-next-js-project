@@ -103,7 +103,7 @@ const DishUpdateForm = ({
             >
               ❌
             </button>
-            <div className="grid grid-cols-2 justify-center items-center max-w-6xl gap-16">
+            <div className="grid md:grid-cols-2 justify-center items-center max-w-6xl md:gap-16 gap-y-7 md:gap-y-0">
               <h2 className="text-4xl font-bold mb-6 text-center text-[#c8a97e] col-span-2">
                 Edit meal
               </h2>
@@ -125,7 +125,7 @@ const DishUpdateForm = ({
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e] dark:bg-white dark:text-black"
                       />
                     </div>
                     <div className="mb-4">
@@ -143,14 +143,14 @@ const DishUpdateForm = ({
                         onChange={(e) => setPrice(e.target.value)}
                         step="0.01"
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e] dark:bg-white dark:text-black"
                       />
                     </div>
                     <div className="mb-4">
                       <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
-                        className="border border-[#c8a97e] rounded-md py-2 focus:outline-offset-4 focus:outline-[#c8a97e]"
+                        className="border border-[#c8a97e] rounded-md py-2 focus:outline-offset-4 focus:outline-[#c8a97e] dark:bg-white dark:text-black"
                         required
                       >
                         <option value="">Select categiry</option>
@@ -176,7 +176,7 @@ const DishUpdateForm = ({
                         onChange={(e) => setDescription(e.target.value)}
                         rows="5"
                         required
-                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e]"
+                        className="mt-1 p-2 w-full border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e] dark:bg-white dark:text-black"
                       ></textarea>
                     </div>
                     <div className="mb-4">
@@ -193,7 +193,7 @@ const DishUpdateForm = ({
                           name="ingredient"
                           value={ingredient}
                           onChange={(e) => setIngredient(e.target.value)}
-                          className="p-2 flex-grow border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e] mr-2"
+                          className="p-2 flex-grow border border-[#c8a97e] rounded-md focus:outline-offset-4 focus:outline-[#c8a97e] mr-2 dark:bg-white dark:text-black"
                         />
                         <button
                           type="button"
@@ -238,7 +238,7 @@ const DishUpdateForm = ({
                 </div>
               </div>
 
-              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:flex flex-col hidden">
                 <div className="flex justify-center mb-8">
                   <Image
                     src={dishImg}

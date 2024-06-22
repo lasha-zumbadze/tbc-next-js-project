@@ -17,7 +17,7 @@ async function BlogSection() {
   const lastImage = images.pop();
 
   return (
-    <div className="flex flex-col items-center py-32 bg-gradient-to-b from-[#293441] to-backgroundDarkblue">
+    <div className="flex flex-col items-center py-32 mt-64 md:mt-0 bg-gradient-to-b from-[#293441] to-backgroundDarkblue">
       <Heading gap={16} minHeight={16}>
         <h1 className=" text-8xl md:text-9xl text-[#a68250]">THE BLOG</h1>
       </Heading>

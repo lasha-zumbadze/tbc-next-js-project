@@ -2,7 +2,6 @@
 
 import { addCartItems } from "@/app/actions/addCartItems";
 import { getCartItems } from "@/app/actions/getCartItems";
-import { getSession } from "@auth0/nextjs-auth0";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ShoppingCartContext = createContext();

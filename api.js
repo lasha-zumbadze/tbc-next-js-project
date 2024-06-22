@@ -12,8 +12,6 @@ export async function getUsers() {
   return users.rows;
 }
 
-// ******************************
-
 export async function getImagesBlobs() {
   const response = await list();
   return response.blobs;

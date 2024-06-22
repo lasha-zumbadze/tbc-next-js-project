@@ -3,6 +3,7 @@ import BlogPosts from "../../../components/blogs/BlogPosts";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import { list } from "@vercel/blob";
+import Decor from "@/components/Decor";
 
 async function Blogs() {
   const blogsData = await getBlogs();
@@ -18,8 +19,20 @@ async function Blogs() {
   const lastImage = images.pop();
 
   return (
-    <>
+    <div className="dark:bg-backgroundDarkblue">
       <Header pageClass="blogs" title="KoKeshI" subtitle="Blogs" />
+      <div className="flex gap-16 justify-center items-center mt-[6rem] py-8">
+        <Decor />
+        <div className="flex flex-col items-center">
+          <h1 className="font-alexBrush text-7xl md:text-[5rem] text-[#a68250]">
+            KoKeshI
+          </h1>
+          <h2 className="text-7xl md:text-[5rem] -mt-4 italic dark:text-white">
+            Blogs
+          </h2>
+        </div>
+        <Decor />
+      </div>
       <main>
         <BlogPosts
           blogs={blogs}
@@ -28,7 +41,7 @@ async function Blogs() {
         />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

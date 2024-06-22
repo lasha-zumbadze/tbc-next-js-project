@@ -10,13 +10,13 @@ import ContactForm from "@/components/ContactForm";
 
 function Contact() {
   return (
-    <>
+    <div className="dark:bg-backgroundDarkblue">
       <Header pageClass="contact" title="KoKeshI" subtitle="Contact" />
       <main>
         <div className="grid lg:grid-cols-2 items-center w-4/5 m-auto gap-x-32 pt-24 pb-40 gap-y-4">
           <div className="flex flex-col gap-24 lg:gap-32">
             <h2 className="text-[3.5rem]">Contact info</h2>
-            <p className="text-[1.6rem] text-gray-500 leading-loose mb-12 col-start-1">
+            <p className="text-[1.6rem] text-gray-500 leading-loose mb-12 col-start-1 dark:text-gray-300">
               We&apos;d love to hear from you! Whether you have a question, need
               a reservation, or just want to share your thoughts, here&apos;s
               how you can reach us. <br /> Enjoy an unforgettable dining
@@ -29,21 +29,24 @@ function Contact() {
               </Link>{" "}
               to secure your table.
             </p>
-            {/* <div className="lg:m-0 w-fit">
-              <Logo titleFont={5} subtitleFont={2} letterSpace={1} />
-            </div> */}
           </div>
-          <div className="lg:col-start-2 mt-20 m-auto lg:m-0 border-solid border-[3px] border-[#c8a97e] p-20 w-fit text-[1.6rem] flex flex-col gap-8 text-gray-500">
+          <div className="lg:col-start-2 mt-20 m-auto lg:m-0 border-solid border-[3px] border-[#c8a97e] p-20 w-fit text-[1.6rem] flex flex-col gap-8 text-gray-500 dark:text-gray-300">
             <p>
-              <span className="text-black text-[1.8rem] mr-4">Address:</span>
+              <span className="text-black text-[1.8rem] mr-4 dark:text-gray-400">
+                Address:
+              </span>
               481 Creekside Lane Avila CA 93424
             </p>
             <p>
-              <span className="text-black text-[1.8rem] mr-4">Phone:</span> +995
-              123 456 789
+              <span className="text-black text-[1.8rem] mr-4 dark:text-gray-400">
+                Phone:
+              </span>{" "}
+              +995 123 456 789
             </p>
             <p>
-              <span className="text-black text-[1.8rem] mr-4">Email:</span>
+              <span className="text-black text-[1.8rem] mr-4 dark:text-gray-400">
+                Email:
+              </span>
               example@gmail.com
             </p>
             <div className="flex justify-around pt-8">
@@ -82,7 +85,7 @@ function Contact() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
