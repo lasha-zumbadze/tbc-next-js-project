@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import { MdSort } from "react-icons/md";
 import { HiSortAscending, HiSortDescending } from "react-icons/hi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { IoArrowRedoSharp } from "react-icons/io5";
 
 import DishUploadForm from "./uploads/DishForm";
 import Link from "next/link";
@@ -153,10 +154,14 @@ function Dishes({ dishes, lastImage, imageNum }) {
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <Link href={`/dishes/${dish.id}`}>
+                  <Link
+                    href={`/dishes/${dish.id}`}
+                    className="flex items-center gap-3"
+                  >
                     <h2 className="text-5xl  text-[#c8a97e] mb-2">
                       {dish.title}
                     </h2>
+                    <IoArrowRedoSharp className="text-4xl text-textGolden w-full" />
                   </Link>
                   <p className="text-[#c8a97e] text-4xl mb-1">₾ {dish.price}</p>
                 </div>

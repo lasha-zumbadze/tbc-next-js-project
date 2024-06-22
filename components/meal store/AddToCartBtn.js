@@ -5,7 +5,7 @@ import { useShoppingCart } from "@/context/ShoppingCartContext";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useRouter } from "next/navigation";
 
-function AddToCartBtn({ id, color }) {
+function AddToCartBtn({ id, detailsPage }) {
   const { user } = useUser();
   const router = useRouter();
 
@@ -27,11 +27,10 @@ function AddToCartBtn({ id, color }) {
 
             increaseCartQuantity(id);
           }}
-          className={`px-6 py-3 ${
-            color ? "bg-[#b77b2b]" : "bg-[#c8a97e]"
-          }  text-white text-2xl font-semibold rounded transition-colors duration-300 hover:bg-white ${
-            color ? "hover:text-[#b77b2b]" : "hover:text-[#c8a97e]"
-          }  hover:border-[#c8a97e] border border-[#c8a97e] mt-auto`}
+          className="px-6 py-3 
+            bg-[#c8a97e]
+            text-white text-2xl font-semibold rounded transition-colors duration-300 hover:bg-white hover:text-[#c8a97e]
+            hover:border-[#c8a97e] border border-[#c8a97e] mt-auto"
         >
           Order now
         </button>
@@ -40,24 +39,18 @@ function AddToCartBtn({ id, color }) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => decreaseCartQuantity(id)}
-              className={`${
-                color ? "bg-[#b77b2b]" : "bg-[#c8a97e]"
-              } transition-all w-10 h-10 text-white text-4xl font-semibold flex justify-center items-center rounded-md pb-1 hover:bg-white ${
-                color ? "hover:text-[#b77b2b]" : "hover:text-[#c8a97e]"
-              } hover:border-[#c8a97e] border border-[#c8a97e]`}
+              className="bg-[#c8a97e]
+              transition-all w-10 h-10 text-white text-4xl font-semibold flex justify-center items-center rounded-md pb-1 hover:bg-white hover:text-[#c8a97e] hover:border-[#c8a97e] border border-[#c8a97e]"
             >
               -
             </button>
-            <div className="text-2xl">
+            <div className={`text-2xl ${detailsPage && "text-white"}`}>
               <span className="text-3xl">{quantity}</span> in cart
             </div>
             <button
               onClick={() => increaseCartQuantity(id)}
-              className={`${
-                color ? "bg-[#b77b2b]" : "bg-[#c8a97e]"
-              } transition-all w-10 h-10 text-white text-3xl font-semibold flex justify-center items-center rounded-md pb-1 hover:bg-white ${
-                color ? "hover:text-[#b77b2b]" : "hover:text-[#c8a97e]"
-              } hover:border-[#c8a97e] border border-[#c8a97e]`}
+              className="bg-[#c8a97e]
+              transition-all w-10 h-10 text-white text-3xl font-semibold flex justify-center items-center rounded-md pb-1 hover:bg-white hover:text-[#c8a97e] hover:border-[#c8a97e] border border-[#c8a97e]"
             >
               +
             </button>

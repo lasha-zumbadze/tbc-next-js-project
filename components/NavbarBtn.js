@@ -18,7 +18,7 @@ const linkArr = [
   "admin",
 ];
 
-function Navbar() {
+function NavbarBtn() {
   const [isActive, setIsActive] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -91,4 +91,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarBtn;
