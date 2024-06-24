@@ -1,7 +1,7 @@
 function HoverButton({ children, width }) {
   return (
     <div
-      className={`border-solid border-textGolden border-[1px] text-3xl lg:block text-center px-8 py-6 relative w-${
+      className={`border-solid border-textGolden border-[1px] text-3xl lg:block text-center px-8 py-6 relative  w-${
         width || "96"
       } h-[5.5rem]`}
     >

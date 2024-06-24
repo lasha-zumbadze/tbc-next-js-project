@@ -20,7 +20,7 @@ function BlogPostsForHomePage({ blogs }) {
         href="/blog"
         className="text-textGolden hover:text-white transition-all"
       >
-        <HoverButton>Read Menu</HoverButton>
+        <HoverButton>Read Blogs</HoverButton>
       </Link>
     </div>
   );
