@@ -68,7 +68,7 @@ function ContactForm() {
             type="submit"
             className="hover:text-white text-textGolden transition-all"
           >
-            <HoverButton width={96}>Send Message</HoverButton>
+            <HoverButton>Send Message</HoverButton>
           </button>
         </div>
       </form>

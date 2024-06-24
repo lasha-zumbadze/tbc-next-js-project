@@ -69,7 +69,7 @@ function Reservation() {
         }}
         className="hover:text-white text-textGolden transition-all"
       >
-        <HoverButton width="96">Submit</HoverButton>
+        <HoverButton>Submit</HoverButton>
       </button>
     </section>
   );

@@ -108,13 +108,13 @@ function Header({ title, subtitle, children }) {
             href="#reservation"
             className="text-textGolden hover:text-white transition-all"
           >
-            <HoverButton width="60">Online Order</HoverButton>
+            <HoverButton>Online Order</HoverButton>
           </Link>
           <Link
             href={`tel:+995123456789`}
             className="text-textGolden hover:text-white transition-all"
           >
-            <HoverButton width="96">
+            <HoverButton>
               <span>Call </span>+995 123 456 789
             </HoverButton>
           </Link>
