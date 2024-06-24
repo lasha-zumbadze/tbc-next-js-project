@@ -74,6 +74,7 @@
 
 "use client";
 
+import { useUser } from "@auth0/nextjs-auth0/client";
 import blog_1 from "../../public/images/blog_1.png";
 import Pagination from "../Pagination";
 import BlogUploadForm from "../uploads/BlogForm";
@@ -94,12 +95,15 @@ function BlogPosts({ blogs, lastImage, imageNum }) {
   const start = (curPage - 1) * resultsPerPage;
   const end = curPage * resultsPerPage;
   const pageNum = Math.ceil(blogs.length / resultsPerPage || 1);
+  const { user } = useUser();
 
   return (
     <div className="px-4 bg-gray-50 py-12 mt-20 dark:bg-gradient-to-b from-backgroundDarkblue to-[#293441]">
       <div className="flex flex-col items-center mt-16 gap-12 md:gap-16">
         <Search search={search} setSearch={setSearch} />
-        <BlogUploadForm imgUrl={lastImage?.url} />
+        {user?.nickname === "admin" && (
+          <BlogUploadForm imgUrl={lastImage?.url} />
+        )}
       </div>
 
       <div className="p-16 px-24 grid grid-cols-1 gap-24 md:grid-cols-2 md:gap-12 md:px-12 lg:px-[26rem] lg:gap-x-40 lg:pb-48 lg:pt-28">

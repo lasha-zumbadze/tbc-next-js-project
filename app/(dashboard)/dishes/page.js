@@ -22,11 +22,11 @@ async function DishesPage() {
   return (
     <div className="dark:bg-backgroundDarkblue">
       <Header pageClass="menu" title="KoKeshI" subtitle="Dish" />
-      <div className="flex justify-center mt-[6rem] mb-16 py-8 items-center gap-16">
+      <div className="flex flex-col md:flex-row justify-center mt-[6rem] mb-16 py-8 items-center gap-16">
         <Decor />
         <div className="flex items-center flex-col">
           <h1 className="font-alexBrush text-7xl md:text-[5rem] text-[#a68250]">
-            The Venue
+            KoKeshI
           </h1>
           <h2 className="text-7xl md:text-[5rem] -mt-8 italic dark:text-white">
             Enjoy our meals

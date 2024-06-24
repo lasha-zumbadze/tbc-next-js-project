@@ -35,8 +35,8 @@ function AddToCartBtn({ id, detailsPage }) {
           Order now
         </button>
       ) : (
-        <div className="flex flex-col items-center gap-3">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col items-center gap-3 w-56">
+          <div className="flex items-center w-full justify-between gap-2">
             <button
               onClick={() => decreaseCartQuantity(id)}
               className="bg-[#c8a97e]

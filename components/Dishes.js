@@ -16,6 +16,7 @@ import { deleteDish } from "@/app/actions/deleteDish";
 import { useRouter } from "next/navigation";
 import DeleteDish from "./deletion/DeleteDish";
 import HalfRating from "./Raiting";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 function Dishes({ dishes, lastImage, imageNum }) {
   const [curPage, setCurrPage] = useState(1);
@@ -26,6 +27,7 @@ function Dishes({ dishes, lastImage, imageNum }) {
   const [rating, setRating] = useState(0);
   const imgInitialNum = useRef(imageNum);
   const router = useRouter();
+  const { user } = useUser();
 
   const resultsPerPage = 8;
   const start = (curPage - 1) * resultsPerPage;
@@ -104,16 +106,20 @@ function Dishes({ dishes, lastImage, imageNum }) {
                   onChange={(e) => setCategory(e.target.value)}
                 >
                   <option value="">Select categiry</option>
-                  <option>Gunkan & Nigiri</option>
-                  <option>Rice & Noodles</option>
+                  <option>Roll</option>
+                  <option>Maki</option>
+                  <option>Gunkan</option>
+                  <option>Nigiri</option>
                 </select>
               </li>
             </ul>
           </div>
         </div>
-        <div>
-          <DishUploadForm imgUrl={lastImage?.url} />
-        </div>
+        {user?.nickname === "admin" && (
+          <div>
+            <DishUploadForm imgUrl={lastImage?.url} />
+          </div>
+        )}
       </div>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 px-16 sm:px-48 md:px-0 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-14">
@@ -123,24 +129,26 @@ function Dishes({ dishes, lastImage, imageNum }) {
                 key={dish.id}
                 className="p-4 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col dark:bg-gray-100"
               >
-                <div className="flex justify-between mb-4">
-                  <DishUpdateForm
-                    dishTitle={dish.title}
-                    dishPrice={dish.price}
-                    dishDescription={dish.description}
-                    dishIngredients={dish.ingredients}
-                    dishCategory={dish.category}
-                    dishImg={
-                      imageNum > imgInitialNum.current
-                        ? lastImage.url
-                        : dish.imgurl
-                    }
-                    imgInitialNum={imgInitialNum}
-                    imageNum={imageNum}
-                    id={dish.id}
-                  />
-                  <DeleteDish id={dish.id} />
-                </div>
+                {user?.nickname === "admin" && (
+                  <div className="flex justify-between mb-4">
+                    <DishUpdateForm
+                      dishTitle={dish.title}
+                      dishPrice={dish.price}
+                      dishDescription={dish.description}
+                      dishIngredients={dish.ingredients}
+                      dishCategory={dish.category}
+                      dishImg={
+                        imageNum > imgInitialNum.current
+                          ? lastImage.url
+                          : dish.imgurl
+                      }
+                      imgInitialNum={imgInitialNum}
+                      imageNum={imageNum}
+                      id={dish.id}
+                    />
+                    <DeleteDish id={dish.id} />
+                  </div>
+                )}
                 <div className="flex justify-center mb-8">
                   <div className="w-full aspect-[3/2] relative">
                     <Image

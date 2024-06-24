@@ -3,7 +3,6 @@ import Link from "next/link";
 import Logo from "./Logo";
 import ShoppingCartBtn from "./meal store/ShoppingCartBtn";
 import ThemeSwitcher from "./ThemeSwitcher";
-import UserIcon from "./UserIcon";
 import NavbarBtn from "./NavbarBtn";
 import icon from "../public/fig.svg";
 import { getSession } from "@auth0/nextjs-auth0";
@@ -56,17 +55,11 @@ function Navigation() {
         >
           Contant
         </Link>
-        {/* <Link
-            className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
-            href="/profile"
-          >
-            Profile
-          </Link> */}
         <Link
-          className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] hover:drop-shadow-3xl"
-          href="/admin"
+          className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
+          href="/profile"
         >
-          Admin
+          Profile
         </Link>
       </ul>
 
@@ -74,18 +67,19 @@ function Navigation() {
         <ShoppingCartBtn />
         <ThemeSwitcher />
         {user ? (
-          <UserIcon user={user} />
+          <a
+            href="/api/auth/logout"
+            className="transition-all text-[1.8rem] hover:text-[#b99056]"
+          >
+            Logout
+          </a>
         ) : (
           <a className="text-white text-3xl" href="/api/auth/login">
             Login
           </a>
         )}
       </div>
-      <Image
-        src={icon}
-        className="absolute top-6 right-8 hidden lg:block"
-        alt="icon"
-      />
+
       <div className="lg:hidden">
         <Logo />
       </div>

@@ -4,8 +4,6 @@ import { NextResponse } from "next/server";
 export async function PUT(request) {
   const { title, blog, imgUrl, id } = await request.json();
 
-  console.log(title, blog, imgUrl, id);
-
   await sql`UPDATE blogs SET title = ${title}, blog = ${blog}, imgUrl = ${imgUrl} WHERE id = ${Number(
     id
   )};`;

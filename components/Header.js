@@ -8,7 +8,6 @@ import NavbarBtn from "./NavbarBtn";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { useUser } from "@auth0/nextjs-auth0/client";
-import UserIcon from "./UserIcon";
 import Image from "next/image";
 import icon from "../public/fig.svg";
 import listIcon from "../public/li.svg";
@@ -65,17 +64,11 @@ function Header({ title, subtitle, children }) {
           >
             Contant
           </Link>
-          {/* <Link
+          <Link
             className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
             href="/profile"
           >
             Profile
-          </Link> */}
-          <Link
-            className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] hover:drop-shadow-3xl"
-            href="/admin"
-          >
-            Admin
           </Link>
         </ul>
 
@@ -83,7 +76,12 @@ function Header({ title, subtitle, children }) {
           <ShoppingCartBtn />
           <ThemeSwitcher />
           {user ? (
-            <UserIcon user={user} />
+            <a
+              href="/api/auth/logout"
+              className="transition-all text-[1.8rem] hover:text-[#b99056]"
+            >
+              Logout
+            </a>
           ) : (
             <a className="text-white text-3xl" href="/api/auth/login">
               Login

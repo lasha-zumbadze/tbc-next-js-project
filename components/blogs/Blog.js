@@ -2,21 +2,25 @@ import Image from "next/image";
 import BlogUpdateForm from "../update/BlogUpdate";
 import DeleteBlog from "../deletion/DeleteBlog";
 import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 function Blog({ imgUrl, title, blog, id, imageNum, imgInitialNum, lastImage }) {
+  const { user } = useUser();
   return (
     <div>
-      <div className="flex justify-between mb-4">
-        <BlogUpdateForm
-          blogTitle={title}
-          blogContent={blog}
-          blogImg={imageNum > imgInitialNum.current ? lastImage.url : imgUrl}
-          imgInitialNum={imgInitialNum}
-          imageNum={imageNum}
-          id={id}
-        />
-        <DeleteBlog id={id} />
-      </div>
+      {user?.nickname === "admin" && (
+        <div className="flex justify-between mb-4">
+          <BlogUpdateForm
+            blogTitle={title}
+            blogContent={blog}
+            blogImg={imageNum > imgInitialNum.current ? lastImage.url : imgUrl}
+            imgInitialNum={imgInitialNum}
+            imageNum={imageNum}
+            id={id}
+          />
+          <DeleteBlog id={id} />
+        </div>
+      )}
       <div className="w-full aspect-[3/2] relative">
         <Image
           src={imgUrl}

@@ -149,12 +149,10 @@ const DishUploadForm = ({ imgUrl }) => {
                         required
                       >
                         <option value="">Select categiry</option>
-                        <option>Roll & Maki</option>
-                        <option>Gunkan & Nigiri</option>
-                        <option>Rice & Noodles</option>
-                        <option>Soup & Salad</option>
-                        <option>Set</option>
-                        <option>Drinks</option>
+                        <option>Roll</option>
+                        <option>Maki</option>
+                        <option>Gunkan</option>
+                        <option>Nigiri</option>
                       </select>
                     </div>
                     <div className="mb-4">

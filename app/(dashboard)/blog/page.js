@@ -21,7 +21,7 @@ async function Blogs() {
   return (
     <div className="dark:bg-backgroundDarkblue">
       <Header pageClass="blogs" title="KoKeshI" subtitle="Blogs" />
-      <div className="flex gap-16 justify-center items-center mt-[6rem] py-8">
+      <div className="flex flex-col md:flex-row gap-16 justify-center items-center mt-[6rem] py-8">
         <Decor />
         <div className="flex flex-col items-center">
           <h1 className="font-alexBrush text-7xl md:text-[5rem] text-[#a68250]">
