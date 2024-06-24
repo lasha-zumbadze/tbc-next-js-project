@@ -19,7 +19,7 @@ function ShoppingCartBtn() {
       </svg>
 
       {cartQuantity > 0 && (
-        <div className="bg-danger flex justify-center items-center bg-red-400 text-white text-md absolute -right-1 -bottom-1 w-7 h-7 rounded-full">
+        <div className="bg-danger flex justify-center items-center bg-red-400 text-white text-[1.3rem] md:text-md absolute -right-1 -bottom-1 w-7 h-7 rounded-full">
           {cartQuantity}
         </div>
       )}

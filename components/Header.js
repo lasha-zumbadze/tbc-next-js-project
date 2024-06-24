@@ -64,12 +64,14 @@ function Header({ title, subtitle, children }) {
           >
             Contant
           </Link>
-          <Link
-            className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
-            href="/profile"
-          >
-            Profile
-          </Link>
+          {user && (
+            <Link
+              className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
+              href="/profile"
+            >
+              Profile
+            </Link>
+          )}
         </ul>
 
         <div className="lg:flex justify-around w-2/12 items-center hidden ml-auto">
@@ -103,7 +105,7 @@ function Header({ title, subtitle, children }) {
         <p className="text-8xl mt-4 lg:mt-0 px-4 lg:px-0 leading-[1.2] lg:text-[7rem] italic">
           {subtitle}
         </p>
-        <div className="flex gap-12 w-fit m-auto mt-48">
+        <div className="flex flex-col md:flex-row gap-12 w-fit m-auto mt-48">
           <Link
             href="#reservation"
             className="text-textGolden hover:text-white transition-all"

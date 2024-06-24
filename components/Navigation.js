@@ -24,14 +24,12 @@ function Navigation() {
         >
           Home
         </Link>
-        {/* <li>About us</li> */}
         <Link
           className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
           href="/dishes"
         >
           Dishes
         </Link>
-        {/* <li>Delivery</li> */}
         <Link
           className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
           href="/blog"
@@ -55,12 +53,14 @@ function Navigation() {
         >
           Contant
         </Link>
-        <Link
-          className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
-          href="/profile"
-        >
-          Profile
-        </Link>
+        {user && (
+          <Link
+            className="no-underline text-white cursor-pointer transition-all hover:text-[#c8a97e] drop-shadow-3xl"
+            href="/profile"
+          >
+            Profile
+          </Link>
+        )}
       </ul>
 
       <div className="lg:flex justify-around w-2/12 items-center hidden ml-auto">

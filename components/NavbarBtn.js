@@ -8,15 +8,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { logout } from "@/app/action";
 
-const linkArr = [
-  "home",
-  "meals",
-  "blog",
-  "menu",
-  "contact",
-  "profile",
-  "admin",
-];
+const linkArr = ["home", "dishes", "blog", "menu", "contact", "profile"];
 
 function NavbarBtn() {
   const [isActive, setIsActive] = useState(false);
@@ -81,9 +73,6 @@ function NavbarBtn() {
                 {l.charAt(0).toUpperCase() + l.slice(1)}
               </Link>
             ))}
-            <div className="border-solid border-white border-[2px] text-2xl w-[28rem] text-center font-bold px-8 py-10 mt-20">
-              <span>Reservation: </span>+995 123 456 789
-            </div>
           </ul>
         </div>
       </div>
